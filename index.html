@@ -1,50 +1,83 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>AskMyTuto — Arrêtez de rembobiner. Posez simplement votre question.</title>
+  <title>AskMyTuto — Stop Rewinding Tutorials. Just Ask.</title>
   <meta name="description"
-    content="Transformez n'importe quel tutoriel YouTube en mentor IA interactif. Posez des questions au bon moment, extrayez le code, générez des rapports PDF et apprenez 3x plus vite. Gratuit pour commencer.">
+    content="Turn any YouTube tutorial into an interactive AI mentor. Ask questions at the exact moment, extract code, generate PDF reports, create summaries, and learn 3x faster. Free to start.">
   <meta name="keywords"
-    content="assistant tutoriel youtube, outil apprentissage IA, outil productivité développeur, assistant youtube IA, extraire code vidéo, questions vidéo youtube, apprendre coder youtube, outil apprentissage vidéo, tuteur IA en ligne, résumé youtube IA">
+    content="youtube tutorial assistant, ai learning assistant, interactive learning tool, developer productivity tool, ai youtube assistant, extract code from video, youtube video questions, learn coding youtube, video learning tool, ai tutor online, generate pdf from youtube, youtube summary ai">
   <meta name="author" content="AskMyTuto">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#0d0d0d">
-  <link rel="canonical" href="https://askmytuto.com/fr">
+  <meta name="application-name" content="AskMyTuto">
+  <meta name="apple-mobile-web-app-title" content="AskMyTuto">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="canonical" href="https://askmytuto.com">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Hreflang (multilingual SEO) -->
   <link rel="alternate" hreflang="en" href="https://askmytuto.com">
   <link rel="alternate" hreflang="ar" href="https://askmytuto.com/ar">
-  <link rel="alternate" hreflang="ja" href="https://askmytuto.com/jp">
-  <link rel="alternate" hreflang="bn" href="https://askmytuto.com/bn">
+  <link rel="alternate" hreflang="ja" href="https://askmytuto.com/ja">
+
   <link rel="alternate" hreflang="fr" href="https://askmytuto.com/fr">
   <link rel="alternate" hreflang="x-default" href="https://askmytuto.com">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp, Slack) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://askmytuto.com/fr">
-  <meta property="og:title" content="AskMyTuto — Arrêtez de rembobiner. Posez simplement votre question.">
+  <meta property="og:url" content="https://askmytuto.com">
+  <meta property="og:title" content="AskMyTuto — Stop Rewinding Tutorials. Just Ask.">
   <meta property="og:description"
-    content="Transformez n'importe quel tutoriel YouTube en mentor IA interactif. Posez des questions au bon moment et obtenez des réponses instantanées. Gratuit pour commencer.">
+    content="Turn any YouTube tutorial into an interactive AI mentor. Ask questions at the exact moment you're watching — get instant answers, extract code, generate PDF reports. Free to start.">
   <meta property="og:image" content="https://askmytuto.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="AskMyTuto – Assistant d'apprentissage YouTube propulsé par l'IA">
+  <meta property="og:image:alt" content="AskMyTuto – AI-powered YouTube learning assistant">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:site_name" content="AskMyTuto">
-  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_SA">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="fr_FR">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@askmytuto">
-  <meta name="twitter:title" content="AskMyTuto — Arrêtez de rembobiner. Posez simplement votre question.">
+  <meta name="twitter:creator" content="@askmytuto">
+  <meta name="twitter:title" content="AskMyTuto — Stop Rewinding Tutorials. Just Ask.">
   <meta name="twitter:description"
-    content="Transformez n'importe quel tutoriel YouTube en mentor IA interactif. Gratuit pour commencer.">
+    content="Turn any YouTube tutorial into an interactive AI mentor. Ask questions at the exact moment you're watching — instant answers, code extraction, PDF reports. Free to start.">
   <meta name="twitter:image" content="https://askmytuto.com/og-image.png">
+  <meta name="twitter:image:alt" content="AskMyTuto – AI-powered YouTube learning assistant">
 
-  <!-- Schema.org -->
+  <!-- Schema.org — WebSite -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AskMyTuto",
+  "url": "https://askmytuto.com",
+  "description": "AI-powered YouTube tutorial assistant. Ask questions at any moment, extract code, generate PDF summaries, track your learning path.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://app.askmytuto.com/app?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+  <!-- Schema.org — SoftwareApplication -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,37 +86,108 @@
   "url": "https://app.askmytuto.com/app",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web",
-  "inLanguage": "fr",
-  "description": "Assistant d'apprentissage YouTube propulsé par l'IA. Posez des questions à tout moment, extrayez le code, générez des résumés PDF.",
-  "offers": [
-    {"@type":"Offer","name":"Gratuit","price":"0","priceCurrency":"USD"},
-    {"@type":"Offer","name":"Pro","price":"9","priceCurrency":"USD","billingIncrement":"month"}
+  "description": "AI-powered YouTube tutorial assistant. Ask questions at any moment, extract code, generate PDF summaries, track your learning path.",
+  "screenshot": "https://askmytuto.com/og-image.png",
+  "featureList": [
+    "Timestamp-aware AI question answering",
+    "Code extraction from videos",
+    "PDF report generation",
+    "Notion and Markdown export",
+    "Frame capture",
+    "Q&A and quiz generation",
+    "Multilingual output support",
+    "Learning path tracker"
   ],
-  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"312"}
+  "offers": [
+    {"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Limited questions per day, unlimited video imports"},
+    {"@type":"Offer","name":"Pro","price":"10","priceCurrency":"USD","priceValidUntil":"2027-12-31","billingIncrement":"month","description":"Unlimited questions, PDF export, code extraction, all features"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"312","bestRating":"5","worstRating":"1"}
 }
 </script>
+
+  <!-- Schema.org — HowTo -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to learn from YouTube tutorials with AskMyTuto",
+  "description": "Turn any YouTube tutorial into an interactive AI learning session in four steps. No extensions, no setup.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Paste any YouTube tutorial",
+      "text": "Drop any YouTube URL. AskMyTuto fetches the full transcript instantly and prepares your interactive session."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Watch at your own pace",
+      "text": "The AI tracks your exact position in the video in real time. When you get confused, don't rewind."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Ask about this moment",
+      "text": "Click 'Ask' and type your question. No context needed — the AI already knows exactly what's on screen."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Get a clear, instant answer",
+      "text": "Receive a context-aware explanation in seconds. Then export code, generate summaries, or keep watching."
+    }
+  ]
+}
+</script>
+
+  <!-- Schema.org — FAQPage -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Qu'est-ce qu'AskMyTuto exactement ?","acceptedAnswer":{"@type":"Answer","text":"AskMyTuto est un assistant d'apprentissage IA pour les tutoriels YouTube. Il suit votre timestamp vidéo en temps réel et vous permet de poser des questions sur le moment exact que vous regardez."}},
-    {"@type":"Question","name":"Fonctionne-t-il avec n'importe quelle vidéo YouTube ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Collez n'importe quelle URL YouTube publique et AskMyTuto récupère instantanément la transcription complète."}},
-    {"@type":"Question","name":"Ai-je besoin d'une carte bancaire pour commencer ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le plan gratuit ne nécessite aucune carte bancaire."}}
-  ]
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Comment apprendre des tutoriels YouTube avec AskMyTuto",
-  "description": "Transformez n'importe quel tutoriel YouTube en session d'apprentissage IA en quatre étapes.",
-  "step": [
-    {"@type":"HowToStep","position":1,"name":"Collez n'importe quel tutoriel YouTube","text":"Collez n'importe quelle URL YouTube. AskMyTuto récupère instantanément la transcription complète."},
-    {"@type":"HowToStep","position":2,"name":"Regardez à votre rythme","text":"L'IA suit votre position exacte dans la vidéo en temps réel."},
-    {"@type":"HowToStep","position":3,"name":"Posez une question sur ce moment","text":"Cliquez sur « Demander » et tapez votre question. Pas besoin de contexte."},
-    {"@type":"HowToStep","position":4,"name":"Obtenez une réponse claire et instantanée","text":"Recevez une explication contextuelle en quelques secondes."}
+    {
+      "@type": "Question",
+      "name": "What exactly is AskMyTuto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AskMyTuto is an AI-powered learning assistant for YouTube tutorials. It tracks your video timestamp in real time and lets you ask questions about the exact moment you're watching — giving you instant, context-aware answers without ever leaving the page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with any YouTube video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Paste any public YouTube URL and AskMyTuto fetches the full transcript instantly. Support for other sources (video files, documentation) is coming soon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get answers in my own language?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can set your preferred output language and chat in it — even if the original tutorial is in a completely different language. AskMyTuto translates context, not just words."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the PDF export include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exported PDF is a full course report: it includes a structured summary, all your Q&A, extracted code snippets, captured frames, your personal notes, smart moment markers, and timestamps — everything in one shareable document."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a credit card to start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The free plan requires no credit card. You get full access to core features with limited daily questions."
+      }
+    }
   ]
 }
 </script>
@@ -151,6 +255,7 @@
       padding: 0 32px;
     }
 
+    /* ─── NAV ─── */
     nav {
       position: sticky;
       top: 0;
@@ -228,6 +333,7 @@
       transform: translateY(-1px);
     }
 
+    /* ─── HERO ─── */
     .hero {
       padding: 100px 0 80px;
       text-align: center;
@@ -270,10 +376,10 @@
     }
 
     h1 {
-      font-size: clamp(44px, 6.5vw, 80px);
+      font-size: clamp(52px, 7vw, 90px);
       font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -2.5px;
+      line-height: 1.0;
+      letter-spacing: -3px;
       margin-bottom: 0;
       color: #c8c8c8;
     }
@@ -346,6 +452,7 @@
     }
 
     .btn-ghost:hover {
+      border-color: var(--border2);
       color: var(--text);
       transform: translateY(-1px);
       background: rgba(255, 255, 255, 0.04);
@@ -357,6 +464,7 @@
       margin-top: 14px;
     }
 
+    /* ─── DEMO WINDOW ─── */
     .demo-wrap {
       max-width: 820px;
       margin: 64px auto 0;
@@ -446,6 +554,7 @@
       padding: 10px 18px;
       border-radius: 8px;
       border: none;
+      cursor: default;
       white-space: nowrap;
     }
 
@@ -538,6 +647,7 @@
       color: var(--teal);
     }
 
+    /* ─── SECTION BASE ─── */
     .section {
       padding: 96px 0;
     }
@@ -573,6 +683,7 @@
       background: var(--border);
     }
 
+    /* ─── FEATURES GRID ─── */
     .features-wrap {
       margin-top: 56px;
       display: grid;
@@ -644,6 +755,7 @@
       padding: 2px 8px;
     }
 
+    /* ─── HOW IT WORKS ─── */
     .steps {
       display: flex;
       flex-direction: column;
@@ -699,6 +811,7 @@
       line-height: 1.6;
     }
 
+    /* ─── OUTPUTS ─── */
     .outputs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -737,6 +850,7 @@
       line-height: 1.55;
     }
 
+    /* ─── LANGUAGES ─── */
     .lang-bar {
       display: flex;
       gap: 10px;
@@ -765,6 +879,7 @@
       color: var(--teal);
     }
 
+    /* ─── SKILLS ─── */
     .skills-strip {
       padding: 48px 0;
       border-top: 1px solid var(--border);
@@ -804,6 +919,7 @@
       color: var(--text);
     }
 
+    /* ─── PRICING ─── */
     .pricing-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -933,6 +1049,7 @@
       box-shadow: 0 4px 30px rgba(34, 211, 164, 0.35);
     }
 
+    /* ─── FAQ ─── */
     .faq {
       max-width: 680px;
       margin: 48px auto 0;
@@ -986,10 +1103,11 @@
     }
 
     .faq-item.open .faq-a {
-      max-height: 220px;
+      max-height: 200px;
       padding: 0 20px 18px;
     }
 
+    /* ─── CTA BLOCK ─── */
     .cta-block {
       text-align: center;
       padding: 96px 0;
@@ -1018,6 +1136,7 @@
       margin-bottom: 36px;
     }
 
+    /* ─── FOOTER ─── */
     footer {
       border-top: 1px solid var(--border);
       padding: 36px 0;
@@ -1079,6 +1198,7 @@
       border-color: rgba(45, 212, 191, 0.4);
     }
 
+    /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -1120,7 +1240,11 @@
         grid-template-columns: 1fr;
       }
 
-      .nav-links a:not(.btn-cta) {
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .nav-links a {
         display: none;
       }
 
@@ -1138,18 +1262,16 @@
 <body>
 
   <!-- NAV -->
-  <nav aria-label="Navigation principale">
+  <nav aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="https://askmytuto.com/fr" class="logo" aria-label="Accueil AskMyTuto">
+      <a href="https://askmytuto.com" class="logo" aria-label="AskMyTuto home">
         <div class="logo-icon" aria-hidden="true">📖</div>
         AskMyTuto
       </a>
       <div class="nav-links">
-        <a href="#how-it-works">Comment ça marche</a>
-        <a href="#pricing">Tarifs</a>
-        <a href="https://app.askmytuto.com/app#pricing" class="btn-cta"
-          aria-label="Aller à l'application AskMyTuto">Aller à
-          l'appli →</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://app.askmytuto.com/app" class="btn-cta" aria-label="Go to AskMyTuto app">Go to App →</a>
       </div>
     </div>
   </nav>
@@ -1159,29 +1281,31 @@
     <div class="container">
       <div class="hero-badge fu">
         <span class="badge-dot" aria-hidden="true"></span>
-        Conçu pour les développeurs qui apprennent sur YouTube
+        Built for developers who learn from YouTube
       </div>
       <h1 class="fu d1">
-        Arrêtez de rembobiner les tutoriels.<br>
-        <span class="gradient">Posez simplement votre question.</span>
+        Stop Rewinding Tutorials.<br>
+        <span class="gradient">Just Ask.</span>
       </h1>
-      <p class="hero-tagline fu d2">Transformez n'importe quel tutoriel YouTube en mentor interactif.</p>
-      <p class="hero-sub fu d2">Posez des questions sur le moment exact que vous regardez — obtenez des réponses
-        instantanées et claires sans changer d'onglet, chercher sur Google ou rembobiner.</p>
+      <p class="hero-tagline fu d2">Turn any YouTube tutorial into an interactive mentor.</p>
+      <p class="hero-sub fu d2">Ask questions about the exact moment you're watching — and get instant, clear answers
+        without switching tabs, Googling, or rewatching.</p>
       <div class="hero-cta fu d3">
         <a href="https://app.askmytuto.com/auth" class="btn-primary"
-          aria-label="Commencer gratuitement, sans carte bancaire">
-          Commencer gratuitement — Sans carte bancaire
+          aria-label="Start AskMyTuto for free, no credit card needed">
+          Start Free — No Credit Card
         </a>
-        <a href="#how-it-works" class="btn-ghost" aria-label="Voir AskMyTuto en action">
-          ▷ Voir en action
+        <a href="#how-it-works" class="btn-ghost" aria-label="See how AskMyTuto works">
+          ▷ See it in action
         </a>
       </div>
-      <p class="hero-note fu d3">Sans carte bancaire · Plan gratuit à vie · Configuration en secondes</p>
+      <p class="hero-note fu d3">No credit card required · Free forever plan · Setup in seconds</p>
     </div>
 
+    <!-- DEMO -->
     <div class="demo-wrap fu d3">
-      <div class="demo-window" role="img" aria-label="Démo de l'application AskMyTuto">
+      <div class="demo-window" role="img"
+        aria-label="AskMyTuto app demo showing timestamp-aware AI answering a useEffect question">
         <div class="demo-bar" aria-hidden="true">
           <div class="dots"><span></span><span></span><span></span></div>
           <div class="url-bar">https://youtube.com/watch?v=react-hooks-tutorial</div>
@@ -1189,25 +1313,23 @@
         <div class="demo-body">
           <div class="url-input-row" aria-hidden="true">
             <div class="url-input">https://youtube.com/watch?v=react-hooks-tutorial</div>
-            <div class="url-btn">Charger</div>
+            <div class="url-btn">Load</div>
           </div>
           <div class="timestamp-bar" aria-hidden="true">
             <span class="ts-pill">12:34</span>
-            <span class="ts-label">React Hooks — Tutoriel complet 2024</span>
+            <span class="ts-label">React Hooks — Complete Tutorial 2024</span>
           </div>
           <div class="chat" role="log" aria-live="polite">
             <div class="msg">
-              <div class="av u" aria-label="Utilisateur">U</div>
-              <div class="bubble">Pourquoi utilise-t-on <code>useEffect</code> ici plutôt que <code>useMemo</code> ?
-              </div>
+              <div class="av u" aria-label="User">U</div>
+              <div class="bubble">Why is <code>useEffect</code> used here instead of <code>useMemo</code>?</div>
             </div>
             <div class="msg ai">
               <div class="av ai" aria-label="AskMyTuto AI">✦</div>
-              <div class="bubble">À <strong>12:34</strong>, le formateur utilise <code>useEffect</code> parce que ce
-                code exécute un <em>effet de bord</em> (appel API) — pas une valeur dérivée. <code>useMemo</code> est
-                destiné aux calculs qui retournent des valeurs mémoïsées. Puisque la récupération de données déclenche
-                une action externe plutôt que de retourner un résultat calculé, <code>useEffect</code> est le hook
-                approprié ici.</div>
+              <div class="bubble">At <strong>12:34</strong>, the tutor uses <code>useEffect</code> because this code
+                runs a <em>side effect</em> (API call) — not a derived value. <code>useMemo</code> is for computations
+                that return memoized values. Since fetching data triggers an external action rather than returning a
+                computed result, <code>useEffect</code> is the correct hook here.</div>
             </div>
           </div>
         </div>
@@ -1215,17 +1337,23 @@
     </div>
   </header>
 
-  <!-- SKILLS -->
-  <div class="skills-strip" aria-label="Sujets d'apprentissage supportés">
+  <!-- SKILLS STRIP -->
+  <div class="skills-strip" aria-label="Supported learning topics">
     <div class="container">
-      <p class="skills-label">Conçu pour apprendre</p>
+      <p class="skills-label">Made for developers learning</p>
       <div class="skills-row">
-        <span class="skill">Python</span><span class="skill">React</span>
-        <span class="skill">JavaScript</span><span class="skill">TypeScript</span>
-        <span class="skill">Node.js</span><span class="skill">Next.js</span>
-        <span class="skill">CSS / Tailwind</span><span class="skill">SQL</span>
-        <span class="skill">Docker</span><span class="skill">Git</span>
-        <span class="skill">SEO</span><span class="skill">+ tout sujet</span>
+        <span class="skill">Python</span>
+        <span class="skill">React</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Next.js</span>
+        <span class="skill">CSS / Tailwind</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Git</span>
+        <span class="skill">SEO</span>
+        <span class="skill">+ any topic</span>
       </div>
     </div>
   </div>
@@ -1233,263 +1361,279 @@
   <!-- FEATURES -->
   <section class="section" id="features" aria-labelledby="features-heading">
     <div class="container">
-      <span class="s-label">Fonctionnalités</span>
-      <h2 id="features-heading">Tout ce dont vous avez besoin<br>pour vraiment apprendre plus vite</h2>
-      <p class="s-sub">AskMyTuto n'est pas un outil de prise de notes. C'est un environnement d'apprentissage complet
-        propulsé par l'IA, conçu autour de la façon dont les développeurs regardent réellement les tutoriels.</p>
+      <span class="s-label">Features</span>
+      <h2 id="features-heading">Everything You Need to<br>Actually Learn Faster</h2>
+      <p class="s-sub">AskMyTuto isn't a note-taking tool. It's a full AI-powered learning environment built around how
+        developers actually watch tutorials.</p>
+
       <div class="features-wrap" role="list">
-        <article class="feat" role="listitem"><span class="feat-num">01</span>
-          <div class="feat-icon">▶</div>
-          <h3>Collez n'importe quelle source</h3>
-          <p>Collez n'importe quelle URL YouTube. D'autres sources (fichiers vidéo, docs) arrivent bientôt.</p><span
-            class="feat-badge">Bientôt</span>
+        <article class="feat" role="listitem">
+          <span class="feat-num">01</span>
+          <div class="feat-icon" aria-hidden="true">▶</div>
+          <h3>Paste any tutorial source</h3>
+          <p>Drop any YouTube URL. More sources (video files, docs) coming soon.</p>
+          <span class="feat-badge">Soon: Docs, Video</span>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">02</span>
-          <div class="feat-icon">💬</div>
-          <h3>Posez des questions sur n'importe quel moment</h3>
-          <p>Cliquez sur « Demander » à n'importe quel timestamp. Obtenez une réponse contextuelle basée sur ce qui est
-            à l'écran.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">02</span>
+          <div class="feat-icon" aria-hidden="true">💬</div>
+          <h3>Ask about any moment</h3>
+          <p>Click "Ask" at any timestamp. Get a context-aware answer based on exactly what's on screen.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">03</span>
-          <div class="feat-icon">{ }</div>
-          <h3>Extrayez le code de la vidéo</h3>
-          <p>Extrayez tout code affiché dans la vidéo — propre, formaté et prêt à utiliser.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">03</span>
+          <div class="feat-icon" aria-hidden="true">{ }</div>
+          <h3>Extract code from video</h3>
+          <p>Pull out any code shown in the video — clean, formatted, and ready to use.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">04</span>
-          <div class="feat-icon">🖼</div>
-          <h3>Extraire des images</h3>
-          <p>Capturez des images précises à n'importe quel moment — diagrammes, captures d'interface, slides.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">04</span>
+          <div class="feat-icon" aria-hidden="true">🖼</div>
+          <h3>Extract frames</h3>
+          <p>Capture exact frames from any moment — diagrams, UI screenshots, slides, anything visual.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">05</span>
-          <div class="feat-icon">📄</div>
-          <h3>Générer des rapports PDF complets</h3>
-          <p>Exportez un rapport de cours complet avec résumés, Q&R, extraits de code, timestamps et images.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">05</span>
+          <div class="feat-icon" aria-hidden="true">📄</div>
+          <h3>Generate full PDF reports</h3>
+          <p>Export a complete course report with summaries, Q&A, code snippets, timestamps, and frames.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">06</span>
-          <div class="feat-icon">📝</div>
-          <h3>Export Notion et Markdown</h3>
-          <p>Générez des résumés structurés en Notion ou Markdown — prêts à intégrer dans vos docs.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">06</span>
+          <div class="feat-icon" aria-hidden="true">📝</div>
+          <h3>Notion & Markdown export</h3>
+          <p>Generate structured summaries in Notion or Markdown — ready to drop into your docs.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">07</span>
-          <div class="feat-icon">🧠</div>
-          <h3>Générer des Q&R et quiz</h3>
-          <p>Générez automatiquement questions et réponses depuis n'importe quelle vidéo pour tester votre
-            compréhension.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">07</span>
+          <div class="feat-icon" aria-hidden="true">🧠</div>
+          <h3>Generate Q&A & quizzes</h3>
+          <p>Auto-generate questions and answers from any video to test your understanding.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">08</span>
-          <div class="feat-icon">⚡</div>
-          <h3>Compléter et améliorer le code</h3>
-          <p>Demandez à l'IA de terminer, refactoriser ou expliquer n'importe quel code de la vidéo.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">08</span>
+          <div class="feat-icon" aria-hidden="true">⚡</div>
+          <h3>Complete & improve code</h3>
+          <p>Ask the AI to finish, refactor, or explain any piece of code from the video.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">09</span>
-          <div class="feat-icon">📍</div>
-          <h3>Marqueurs de moments intelligents</h3>
-          <p>Les moments clés sont automatiquement détectés et marqués sur la timeline — révisez-les à tout moment.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">09</span>
+          <div class="feat-icon" aria-hidden="true">📍</div>
+          <h3>Smart moment markers</h3>
+          <p>Key moments are automatically detected and marked on the timeline — review them any time.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">10</span>
-          <div class="feat-icon">🗒</div>
-          <h3>Ajoutez vos propres notes</h3>
-          <p>Déposez des notes personnelles à n'importe quel timestamp. Vos pensées, liées au moment exact.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">10</span>
+          <div class="feat-icon" aria-hidden="true">🗒</div>
+          <h3>Add your own notes</h3>
+          <p>Drop personal notes at any timestamp. Your thoughts, linked to the exact moment.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">11</span>
-          <div class="feat-icon">🗺</div>
-          <h3>Suivi du parcours d'apprentissage</h3>
-          <p>Visualisez votre progression, suivez ce que vous avez couvert et sachez quoi apprendre ensuite.</p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">11</span>
+          <div class="feat-icon" aria-hidden="true">🗺</div>
+          <h3>Learning path tracker</h3>
+          <p>See your progress, track what you've covered, and know what to learn next.</p>
         </article>
-        <article class="feat" role="listitem"><span class="feat-num">12</span>
-          <div class="feat-icon">🌐</div>
-          <h3>N'importe quelle langue de sortie</h3>
-          <p>Chattez et recevez des réponses dans votre langue préférée — même si la vidéo est dans une autre langue.
-          </p>
+        <article class="feat" role="listitem">
+          <span class="feat-num">12</span>
+          <div class="feat-icon" aria-hidden="true">🌐</div>
+          <h3>Any output language</h3>
+          <p>Chat and receive answers in your preferred language — even if the video is in another one.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- HOW IT WORKS -->
   <section class="section" id="how-it-works" aria-labelledby="how-heading">
     <div class="container">
-      <span class="s-label">Comment ça marche</span>
-      <h2 id="how-heading">Quatre étapes pour apprendre<br>sans jamais bloquer</h2>
-      <p class="s-sub">Pas d'extensions, pas de configuration. Collez simplement une URL et commencez à apprendre plus
-        intelligemment.</p>
+      <span class="s-label">How It Works</span>
+      <h2 id="how-heading">Four Steps to Learn<br>Without Getting Stuck</h2>
+      <p class="s-sub">No extensions, no setup. Just paste a URL and start learning smarter.</p>
       <div class="steps" role="list">
         <div class="step" role="listitem">
           <div class="step-n">01</div>
           <div class="step-body">
-            <h3>Collez n'importe quel tutoriel YouTube</h3>
-            <p>Collez n'importe quelle URL YouTube. AskMyTuto récupère instantanément la transcription complète et
-              prépare votre session interactive.</p>
+            <h3>Paste any YouTube tutorial</h3>
+            <p>Drop any YouTube URL. AskMyTuto fetches the full transcript instantly and prepares your interactive
+              session.</p>
           </div>
         </div>
         <div class="step" role="listitem">
           <div class="step-n">02</div>
           <div class="step-body">
-            <h3>Regardez à votre rythme</h3>
-            <p>L'IA suit votre position exacte dans la vidéo en temps réel. Quand vous êtes bloqué, ne rembobinez pas.
-            </p>
+            <h3>Watch at your own pace</h3>
+            <p>The AI tracks your exact position in the video in real time. When you get confused, don't rewind.</p>
           </div>
         </div>
         <div class="step" role="listitem">
           <div class="step-n">03</div>
           <div class="step-body">
-            <h3>Posez une question sur ce moment</h3>
-            <p>Cliquez sur « Demander » et tapez votre question. Pas besoin de contexte — l'IA sait déjà exactement ce
-              qui est à l'écran.</p>
+            <h3>Ask about this moment</h3>
+            <p>Click "Ask" and type your question. No context needed — the AI already knows exactly what's on screen.
+            </p>
           </div>
         </div>
         <div class="step" role="listitem">
           <div class="step-n">04</div>
           <div class="step-body">
-            <h3>Obtenez une réponse claire et instantanée</h3>
-            <p>Recevez une explication contextuelle en quelques secondes. Puis exportez le code, générez des résumés ou
-              continuez à regarder.</p>
+            <h3>Get a clear, instant answer</h3>
+            <p>Receive a context-aware explanation in seconds. Then export code, generate summaries, or keep watching.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
-  <!-- OUTPUTS -->
+  <!-- OUTPUT FORMATS -->
   <section class="section" aria-labelledby="outputs-heading">
     <div class="container">
-      <span class="s-label">Export et sorties</span>
-      <h2 id="outputs-heading">Apprenez une fois. Gardez tout.</h2>
-      <p class="s-sub">Chaque session génère un artefact de connaissance permanent que vous pouvez référencer, partager
-        ou sur lequel vous pouvez vous appuyer.</p>
+      <span class="s-label">Export & Outputs</span>
+      <h2 id="outputs-heading">Learn Once. Keep Everything.</h2>
+      <p class="s-sub">Every session generates a permanent knowledge artifact you can reference, share, or build on.</p>
       <div class="outputs-grid" role="list">
-        <article class="output-card" role="listitem"><span class="out-icon">📋</span>
-          <h3>Rapport PDF complet</h3>
-          <p>Document de cours complet avec résumé, Q&R, code, images, timestamps et notes.</p>
+        <article class="output-card" role="listitem">
+          <span class="out-icon" aria-hidden="true">📋</span>
+          <h3>Full PDF Report</h3>
+          <p>Complete course document with summary, Q&A, code, frames, timestamps, and notes.</p>
         </article>
-        <article class="output-card" role="listitem"><span class="out-icon">🗃</span>
-          <h3>Export Notion</h3>
-          <p>Page Notion structurée avec sections, blocs de code et surlignages — prête à importer.</p>
+        <article class="output-card" role="listitem">
+          <span class="out-icon" aria-hidden="true">🗃</span>
+          <h3>Notion Export</h3>
+          <p>Structured Notion page with sections, code blocks, and highlights — ready to import.</p>
         </article>
-        <article class="output-card" role="listitem"><span class="out-icon">📄</span>
-          <h3>Résumé Markdown</h3>
-          <p>Fichier .md propre compatible avec Obsidian, GitHub, Notion ou tout éditeur.</p>
+        <article class="output-card" role="listitem">
+          <span class="out-icon" aria-hidden="true">📄</span>
+          <h3>Markdown Summary</h3>
+          <p>Clean `.md` file compatible with Obsidian, GitHub, Notion, or any editor.</p>
         </article>
-        <article class="output-card" role="listitem"><span class="out-icon">{ }</span>
-          <h3>Extraction de code</h3>
-          <p>Tout le code de la vidéo extrait, formaté et prêt à copier dans votre IDE.</p>
+        <article class="output-card" role="listitem">
+          <span class="out-icon" aria-hidden="true">{ }</span>
+          <h3>Code Extraction</h3>
+          <p>All code from the video extracted, formatted, and ready to copy into your IDE.</p>
         </article>
-        <article class="output-card" role="listitem"><span class="out-icon">🖼</span>
-          <h3>Captures d'images</h3>
-          <p>Images visuelles clés sauvegardées — diagrammes, slides et exemples d'interface préservés.</p>
+        <article class="output-card" role="listitem">
+          <span class="out-icon" aria-hidden="true">🖼</span>
+          <h3>Frame Captures</h3>
+          <p>Key visual frames saved and attached — diagrams, slides, and UI examples preserved.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- LANGUAGE -->
   <section class="section" aria-labelledby="lang-heading">
     <div class="container">
-      <span class="s-label">Multilingue</span>
-      <h2 id="lang-heading">Apprenez dans votre langue.<br>Même si la vidéo ne l'est pas.</h2>
-      <p class="s-sub">Choisissez votre langue de sortie préférée et chattez dedans — même si le tutoriel est
-        entièrement dans une autre langue. AskMyTuto traduit le contexte, pas seulement les mots.</p>
-      <div class="lang-bar">
-        <span class="lang-chip hi">🇫🇷 Français</span>
-        <span class="lang-chip">🇬🇧 English</span><span class="lang-chip">🇸🇦 العربية</span>
-        <span class="lang-chip">🇯🇵 日本語</span><span class="lang-chip">🇧🇩 বাংলা</span>
-        <span class="lang-chip">🇩🇪 Deutsch</span><span class="lang-chip">🇪🇸 Español</span>
-        <span class="lang-chip">🇵🇹 Português</span><span class="lang-chip">🇹🇷 Türkçe</span>
-        <span class="lang-chip">+ d'autres</span>
+      <span class="s-label">Multilingual</span>
+      <h2 id="lang-heading">Learn in Your Language.<br>Even When the Video Isn't.</h2>
+      <p class="s-sub">Choose your preferred output language and chat in it — even if the tutorial is entirely in
+        another language. AskMyTuto translates the context, not just the words.</p>
+      <div class="lang-bar" aria-label="Supported output languages">
+        <span class="lang-chip hi">🇬🇧 English</span>
+        <span class="lang-chip">🇸🇦 Arabic</span>
+        <span class="lang-chip">🇫🇷 Français</span>
+        <span class="lang-chip">🇯🇵 日本語</span>
+        <span class="lang-chip">🇧🇩 বাংলা</span>
+        <span class="lang-chip">🇩🇪 Deutsch</span>
+        <span class="lang-chip">🇪🇸 Español</span>
+        <span class="lang-chip">🇵🇹 Português</span>
+        <span class="lang-chip">🇹🇷 Türkçe</span>
+        <span class="lang-chip">+ more</span>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- PRICING -->
   <section class="section" id="pricing" aria-labelledby="pricing-heading">
     <div class="container" style="text-align:center">
-      <span class="s-label">Tarifs</span>
-      <h2 id="pricing-heading">Tarifs simples</h2>
-      <p class="s-sub" style="margin:0 auto">Commencez gratuitement. Passez à la version Pro quand vous ne pouvez plus
-        vous arrêter d'apprendre.</p>
+      <span class="s-label">Pricing</span>
+      <h2 id="pricing-heading">Simple Pricing</h2>
+      <p class="s-sub" style="margin:0 auto">Start free. Upgrade when you can't stop learning.</p>
       <div class="pricing-row">
-        <article class="plan" aria-label="Plan gratuit">
-          <p class="plan-tier">Gratuit</p>
+        <article class="plan" aria-label="Free plan">
+          <p class="plan-tier">Free</p>
           <p class="plan-price">$0</p>
-          <p class="plan-desc">Essayez l'expérience complète.</p>
+          <p class="plan-desc">Try the full experience.</p>
           <ul class="plan-list">
-            <li>Questions limitées par jour</li>
-            <li>Imports de vidéos illimités</li>
-            <li>IA consciente des timestamps</li>
-            <li>Sauvegarde basique des moments</li>
+            <li>Limited questions per day</li>
+            <li>Unlimited video imports</li>
+            <li>Timestamp-aware AI</li>
+            <li>Basic moment saving</li>
           </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn">Commencer gratuitement</a>
+          <a href="https://app.askmytuto.com/auth" class="plan-btn"
+            aria-label="Start for free, no credit card required">Start Free</a>
         </article>
-        <article class="plan pro" aria-label="Plan Pro, le plus populaire">
-          <div class="plan-badge-top">Le plus populaire</div>
+        <article class="plan pro" aria-label="Pro plan, most popular">
+          <div class="plan-badge-top">Most Popular</div>
           <p class="plan-tier">Pro</p>
-          <p class="plan-price">$10<sub>/mois</sub></p>
-          <p class="plan-desc">Apprenez sans limites.</p>
+          <p class="plan-price">$9<sub>/mo</sub></p>
+          <p class="plan-desc">Learn without limits.</p>
           <ul class="plan-list">
-            <li>Questions illimitées</li>
-            <li>Réponses IA plus rapides</li>
-            <li>Explications avancées</li>
-            <li>Export PDF complet</li>
-            <li>Export Notion et Markdown</li>
-            <li>Extraction de code et d'images</li>
-            <li>Accès anticipé aux nouvelles fonctionnalités</li>
+            <li>Unlimited questions</li>
+            <li>Faster AI responses</li>
+            <li>Advanced explanations</li>
+            <li>Full PDF report export</li>
+            <li>Notion & Markdown export</li>
+            <li>Code & frame extraction</li>
+            <li>Early access to new features</li>
           </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn cta">Passer Pro →</a>
+          <a href="https://app.askmytuto.com/auth" class="plan-btn cta" aria-label="Get started with Pro plan">Go Pro
+            →</a>
         </article>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- FAQ -->
   <section class="section" aria-labelledby="faq-heading">
     <div class="container" style="text-align:center">
       <span class="s-label">FAQ</span>
-      <h2 id="faq-heading">Questions fréquentes</h2>
-      <nav class="faq" role="list">
+      <h2 id="faq-heading">Common Questions</h2>
+      <nav class="faq" role="list" aria-label="Frequently asked questions">
         <div class="faq-item" role="listitem">
-          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Qu'est-ce qu'AskMyTuto exactement ? <span
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What exactly is AskMyTuto? <span
               class="faq-toggle">+</span></div>
-          <div class="faq-a" aria-hidden="true">AskMyTuto est un assistant d'apprentissage IA pour les tutoriels
-            YouTube. Il suit votre timestamp vidéo en temps réel et vous permet de poser des questions sur le moment
-            exact que vous regardez — vous donnant des réponses instantanées et contextuelles sans jamais quitter la
-            page.</div>
+          <div class="faq-a" aria-hidden="true">AskMyTuto is an AI-powered learning assistant for YouTube tutorials. It
+            tracks your video timestamp in real time and lets you ask questions about the exact moment you're watching —
+            giving you instant, context-aware answers without ever leaving the page.</div>
         </div>
         <div class="faq-item" role="listitem">
-          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Fonctionne-t-il avec n'importe quelle
-            vidéo YouTube ? <span class="faq-toggle">+</span></div>
-          <div class="faq-a" aria-hidden="true">Oui. Collez n'importe quelle URL YouTube publique et AskMyTuto récupère
-            instantanément la transcription complète. Le support d'autres sources (fichiers vidéo, documentation) arrive
-            bientôt.</div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Puis-je obtenir des réponses dans ma
-            propre langue ? <span class="faq-toggle">+</span></div>
-          <div class="faq-a" aria-hidden="true">Oui. Vous pouvez définir votre langue de sortie préférée et chatter
-            dedans — même si le tutoriel original est dans une langue complètement différente. AskMyTuto traduit le
-            contexte, pas seulement les mots.</div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Que contient l'export PDF ? <span
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Does it work with any YouTube video? <span
               class="faq-toggle">+</span></div>
-          <div class="faq-a" aria-hidden="true">Le PDF exporté est un rapport de cours complet : il comprend un résumé
-            structuré, tous vos Q&R, des extraits de code, des images capturées, vos notes personnelles, des marqueurs
-            de moments intelligents et des timestamps — tout dans un document partageable.</div>
+          <div class="faq-a" aria-hidden="true">Yes. Paste any public YouTube URL and AskMyTuto fetches the full
+            transcript instantly. Support for other sources (video files, documentation) is coming soon.</div>
         </div>
         <div class="faq-item" role="listitem">
-          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Ai-je besoin d'une carte bancaire pour
-            commencer ? <span class="faq-toggle">+</span></div>
-          <div class="faq-a" aria-hidden="true">Non. Le plan gratuit ne nécessite aucune carte bancaire. Vous obtenez un
-            accès complet aux fonctionnalités de base avec un nombre limité de questions quotidiennes.</div>
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Can I get answers in my own language?
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-a" aria-hidden="true">Yes. You can set your preferred output language and chat in it — even if
+            the original tutorial is in a completely different language. AskMyTuto translates context, not just words.
+          </div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What does the PDF export include? <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">The exported PDF is a full course report: it includes a structured
+            summary, all your Q&A, extracted code snippets, captured frames, your personal notes, smart moment markers,
+            and timestamps — everything in one shareable document.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Do I need a credit card to start? <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">No. The free plan requires no credit card. You get full access to core
+            features with limited daily questions.</div>
         </div>
       </nav>
     </div>
@@ -1498,42 +1642,72 @@
   <!-- CTA -->
   <section class="cta-block" aria-labelledby="cta-heading">
     <div class="container">
-      <span class="s-label">Commencer</span>
-      <h2 id="cta-heading">Arrêtez de perdre du temps sur les tutoriels.<br>Commencez à les comprendre.</h2>
-      <p>Gratuit pour commencer. Sans carte bancaire. Sans configuration.</p>
+      <span class="s-label">Get Started</span>
+      <h2 id="cta-heading">Stop Wasting Time on Tutorials.<br>Start Understanding Them.</h2>
+      <p>Free to start. No credit card. No setup.</p>
       <a href="https://app.askmytuto.com/auth" class="btn-primary"
-        style="font-size:16px;padding:15px 34px;display:inline-flex">
-        Essayer AskMyTuto gratuitement →
+        style="font-size:16px;padding:15px 34px;display:inline-flex" aria-label="Try AskMyTuto for free">
+        Try AskMyTuto Free →
       </a>
-      <p class="hero-note" style="margin-top:16px">Sans carte bancaire · Annulez à tout moment · Plan gratuit à vie</p>
+      <p class="hero-note" style="margin-top:16px">No credit card required · Cancel anytime · Free forever plan</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="foot">
-      <div class="foot-logo"><span class="foot-dot"></span> AskMyTuto</div>
-      <p class="foot-copy">© 2026 AskMyTuto · Conçu pour les développeurs qui apprennent en regardant.</p>
-      <nav class="foot-langs" aria-label="Versions linguistiques">
-        <a href="https://askmytuto.com" hreflang="en">🇺🇸 EN</a>
+      <div class="foot-logo">
+        <span class="foot-dot" aria-hidden="true"></span>
+        AskMyTuto
+      </div>
+      <p class="foot-copy">© 2026 AskMyTuto · Built for developers who learn by watching.</p>
+      <nav class="foot-langs" aria-label="Language versions">
+        <a href="https://askmytuto.com" class="on" hreflang="en">🇺🇸 EN</a>
         <a href="https://askmytuto.com/ar" hreflang="ar">🇸🇦 AR</a>
-        <a href="https://askmytuto.com/jp" hreflang="ja">🇯🇵 JA</a>
-        <a href="https://askmytuto.com/bn" hreflang="bn">🇧🇩 BN</a>
-        <a href="https://askmytuto.com/fr" class="on" hreflang="fr">🇫🇷 FR</a>
+        <a href="https://askmytuto.com/ja" hreflang="ja">🇯🇵 JA</a>
+
+        <a href="https://askmytuto.com/fr" hreflang="fr">🇫🇷 FR</a>
       </nav>
     </div>
   </footer>
 
   <script>
-    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }); }, { threshold: 0.08 });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.fu').forEach(el => obs.observe(el));
-    const cardObs = new IntersectionObserver(entries => { entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }, i * 60); }); }, { threshold: 0.06 });
-    document.querySelectorAll('.feat,.output-card,.step,.plan').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity 0.5s ease,transform 0.5s ease'; cardObs.observe(el); });
+
+    const cardObs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+          }, i * 60);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.feat, .output-card, .step, .plan').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      cardObs.observe(el);
+    });
+
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
-        const item = q.parentElement; const open = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded', 'false'); i.querySelector('.faq-a').setAttribute('aria-hidden', 'true'); });
-        if (!open) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); item.querySelector('.faq-a').setAttribute('aria-hidden', 'false'); }
+        const item = q.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          i.querySelector('.faq-a').setAttribute('aria-hidden', 'true');
+        });
+        if (!open) {
+          item.classList.add('open');
+          q.setAttribute('aria-expanded', 'true');
+          item.querySelector('.faq-a').setAttribute('aria-hidden', 'false');
+        }
       });
       q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
     });
