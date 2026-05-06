@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>AskMyTuto — チュートリアルを巻き戻すのをやめよう。ただ質問しよう。</title>
+  <meta name="description"
+    content="YouTubeのチュートリアルをAIメンターに変換。見ているその瞬間に質問して、即座に明確な回答を取得。コード抽出・PDFレポート生成・3倍速で学習。無料で始められます。">
+  <meta name="keywords"
+    content="YouTube チュートリアル AI, AI学習アシスタント, 開発者向け学習ツール, YouTubeビデオ質問, コーディング学習 YouTube, AI家庭教師, PDF要約生成">
+  <meta name="author" content="AskMyTuto">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="canonical" href="https://askmytuto.com/jp">
+
+  <link rel="alternate" hreflang="en" href="https://askmytuto.com">
+  <link rel="alternate" hreflang="ar" href="https://askmytuto.com/ar">
+  <link rel="alternate" hreflang="ja" href="https://askmytuto.com/jp">
+
+  <link rel="alternate" hreflang="fr" href="https://askmytuto.com/fr">
+  <link rel="alternate" hreflang="x-default" href="https://askmytuto.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://askmytuto.com/jp">
+  <meta property="og:title" content="AskMyTuto — チュートリアルを巻き戻すのをやめよう。ただ質問しよう。">
+  <meta property="og:description" content="YouTubeのチュートリアルをAIメンターに変換。見ているその瞬間に質問して即座に回答。無料で始められます。">
+  <meta property="og:image" content="https://askmytuto.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AskMyTuto – AI搭載YouTubeラーニングアシスタント">
+  <meta property="og:site_name" content="AskMyTuto">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@askmytuto">
+  <meta name="twitter:title" content="AskMyTuto — チュートリアルを巻き戻すのをやめよう。ただ質問しよう。">
+  <meta name="twitter:description" content="YouTubeのチュートリアルをAIメンターに変換。見ているその瞬間に質問して即座に回答。無料で始められます。">
+  <meta name="twitter:image" content="https://askmytuto.com/og-image.png">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AskMyTuto",
+  "url": "https://app.askmytuto.com/app",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "ja",
+  "description": "AI搭載YouTubeチュートリアルアシスタント。いつでも質問し、コードを抽出し、PDFサマリーを生成。",
+  "offers": [
+    {"@type":"Offer","name":"無料","price":"0","priceCurrency":"USD"},
+    {"@type":"Offer","name":"Pro","price":"10","priceCurrency":"USD","billingIncrement":"month"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"312"}
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"AskMyTutoとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"AskMyTutoはYouTubeチュートリアル向けのAI搭載学習アシスタントです。動画のタイムスタンプをリアルタイムで追跡し、視聴中の正確な瞬間について質問できます。"}},
+    {"@type":"Question","name":"どんなYouTube動画でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。公開されているYouTube URLをペーストすれば、AskMyTutoが完全なトランスクリプトを即座に取得します。"}},
+    {"@type":"Question","name":"始めるにはクレジットカードが必要ですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。無料プランではクレジットカードは不要です。1日の質問数に制限はありますが、コア機能に完全にアクセスできます。"}}
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #0d0d0d;
+      --bg2: #111111;
+      --bg3: #161616;
+      --surface: #1a1a1a;
+      --surface2: #202020;
+      --border: rgba(255, 255, 255, 0.08);
+      --border2: rgba(255, 255, 255, 0.13);
+      --text: #e8e8e8;
+      --text2: #888;
+      --text3: #555;
+      --teal: #2dd4bf;
+      --purple: #8b5cf6;
+      --green: #22d3a4;
+      --green-dim: rgba(34, 211, 164, 0.12);
+      --green-border: rgba(34, 211, 164, 0.3);
+      --font: 'Noto Sans JP', 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --r: 10px;
+      --r-lg: 16px;
+      --max: 1100px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(24px);
+      background: rgba(13, 13, 13, 0.9);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text2);
+      padding: 6px 16px;
+      border-radius: 8px;
+      transition: color 0.18s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn-cta {
+      background: var(--green);
+      color: #0d0d0d;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 8px;
+      transition: opacity 0.18s, transform 0.15s;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-cta:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text2);
+      margin-bottom: 36px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      animation: blink 2.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .4
+      }
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 0;
+      color: #c8c8c8;
+    }
+
+    h1 .gradient {
+      background: linear-gradient(90deg, var(--teal) 0%, var(--purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text2);
+      max-width: 580px;
+      margin: 28px auto 16px;
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text3);
+      max-width: 520px;
+      margin: 0 auto 44px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #0d0d0d;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.18s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      background: transparent;
+      transition: border-color 0.18s, color 0.18s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: var(--text3);
+      margin-top: 14px;
+    }
+
+    .demo-wrap {
+      max-width: 820px;
+      margin: 64px auto 0;
+      padding: 0 32px;
+    }
+
+    .demo-window {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 40px 80px rgba(0, 0, 0, 0.7);
+    }
+
+    .demo-bar {
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dots span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .dots span:nth-child(1) {
+      background: #ff5f56;
+    }
+
+    .dots span:nth-child(2) {
+      background: #ffbd2e;
+    }
+
+    .dots span:nth-child(3) {
+      background: #27c93f;
+    }
+
+    .url-bar {
+      flex: 1;
+      background: var(--surface);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--text3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .demo-body {
+      padding: 20px;
+    }
+
+    .url-input-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .url-input {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-family: var(--mono);
+      color: var(--text3);
+    }
+
+    .url-btn {
+      background: var(--green);
+      color: #0d0d0d;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .timestamp-bar {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .ts-pill {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: #a78bfa;
+    }
+
+    .ts-label {
+      font-size: 13px;
+      color: var(--text2);
+      flex: 1;
+    }
+
+    .chat {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .msg {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .av {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .av.u {
+      background: var(--surface2);
+      color: var(--text2);
+      border: 1px solid var(--border2);
+    }
+
+    .av.ai {
+      background: rgba(45, 212, 191, 0.1);
+      color: var(--teal);
+      border: 1px solid rgba(45, 212, 191, 0.25);
+      font-size: 14px;
+    }
+
+    .bubble {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text);
+      max-width: 580px;
+    }
+
+    .msg.ai .bubble {
+      background: rgba(45, 212, 191, 0.06);
+      border-color: rgba(45, 212, 191, 0.18);
+    }
+
+    .bubble code {
+      font-family: var(--mono);
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--teal);
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .s-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h2 {
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .s-sub {
+      font-size: 16px;
+      color: var(--text2);
+      max-width: 520px;
+      font-weight: 400;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    .features-wrap {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .feat {
+      background: var(--bg);
+      padding: 32px 28px;
+      transition: background 0.2s;
+      position: relative;
+    }
+
+    .feat:hover {
+      background: var(--surface);
+    }
+
+    .feat-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text3);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .feat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    .feat h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .feat p {
+      font-size: 13.5px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .feat-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 10px;
+      font-family: var(--mono);
+      color: var(--teal);
+      background: rgba(45, 212, 191, 0.08);
+      border: 1px solid rgba(45, 212, 191, 0.2);
+      border-radius: 100px;
+      padding: 2px 8px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 56px;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.18s;
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step:hover {
+      background: var(--surface);
+    }
+
+    .step-n {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text3);
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .step-body {
+      padding: 28px 28px;
+    }
+
+    .step-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .step-body p {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .outputs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 48px;
+    }
+
+    .output-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 22px 20px;
+      transition: border-color 0.18s, transform 0.18s;
+    }
+
+    .output-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+    }
+
+    .out-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .output-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .output-card p {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    .lang-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .lang-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 7px 18px;
+      font-size: 13px;
+      color: var(--text2);
+      font-family: var(--mono);
+      transition: border-color 0.18s, color 0.18s;
+    }
+
+    .lang-chip:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .lang-chip.hi {
+      border-color: rgba(45, 212, 191, 0.4);
+      color: var(--teal);
+    }
+
+    .skills-strip {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-label {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .skills-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: var(--text2);
+      font-family: var(--mono);
+      transition: border-color 0.18s, color 0.18s;
+    }
+
+    .skill:hover {
+      border-color: var(--border2);
+      color: var(--text);
+    }
+
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 660px;
+      margin: 52px auto 0;
+    }
+
+    .plan {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 32px;
+      position: relative;
+      transition: transform 0.18s;
+    }
+
+    .plan:hover {
+      transform: translateY(-3px);
+    }
+
+    .plan.pro {
+      border-color: rgba(45, 212, 191, 0.3);
+      background: linear-gradient(145deg, rgba(45, 212, 191, 0.05) 0%, var(--surface) 100%);
+    }
+
+    .plan-badge-top {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: #0d0d0d;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 100px;
+      white-space: nowrap;
+      font-family: var(--mono);
+    }
+
+    .plan-tier {
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .plan-price {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 4px;
+    }
+
+    .plan-price sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text2);
+    }
+
+    .plan-desc {
+      font-size: 14px;
+      color: var(--text2);
+      margin-bottom: 24px;
+    }
+
+    .plan-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 26px;
+    }
+
+    .plan-list li {
+      font-size: 14px;
+      color: var(--text2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-list li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--green-dim) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8l3 3L12.5 5' stroke='%2322d3a4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+      border: 1px solid var(--green-border);
+    }
+
+    .plan-btn {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--font);
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--text);
+      transition: background 0.18s, transform 0.12s;
+      display: block;
+      text-align: center;
+    }
+
+    .plan-btn:hover {
+      background: var(--surface2);
+      transform: translateY(-1px);
+    }
+
+    .plan-btn.cta {
+      background: var(--green);
+      color: #0d0d0d;
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(34, 211, 164, 0.2);
+    }
+
+    .plan-btn.cta:hover {
+      opacity: 0.9;
+      box-shadow: 0 4px 30px rgba(34, 211, 164, 0.35);
+    }
+
+    .faq {
+      max-width: 680px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 18px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .faq-q:hover {
+      background: var(--surface2);
+    }
+
+    .faq-toggle {
+      color: var(--text3);
+      font-size: 20px;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+      transition: max-height 0.3s ease, padding 0.2s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 220px;
+      padding: 0 20px 18px;
+    }
+
+    .cta-block {
+      text-align: center;
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .cta-block::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(45, 212, 191, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-block h2 {
+      margin-bottom: 14px;
+    }
+
+    .cta-block p {
+      color: var(--text2);
+      font-size: 17px;
+      margin-bottom: 36px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 0;
+    }
+
+    .foot {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .foot-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .foot-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .foot-copy {
+      font-size: 13px;
+      color: var(--text3);
+    }
+
+    .foot-langs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .foot-langs a {
+      font-size: 12px;
+      color: var(--text3);
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      transition: color 0.18s, border-color 0.18s;
+    }
+
+    .foot-langs a:hover {
+      color: var(--text2);
+      border-color: var(--border2);
+    }
+
+    .foot-langs a.on {
+      color: var(--teal);
+      border-color: rgba(45, 212, 191, 0.4);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fu {
+      opacity: 0;
+    }
+
+    .fu.vis {
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .fu.d1 {
+      animation-delay: 0.08s;
+    }
+
+    .fu.d2 {
+      animation-delay: 0.16s;
+    }
+
+    .fu.d3 {
+      animation-delay: 0.24s;
+    }
+
+    @media (max-width: 768px) {
+      .features-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-row {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links a:not(.btn-cta) {
+        display: none;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .demo-wrap {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav aria-label="メインナビゲーション">
+    <div class="nav-inner">
+      <a href="https://askmytuto.com/jp" class="logo" aria-label="AskMyTutoホーム">
+        <div class="logo-icon" aria-hidden="true">📖</div>
+        AskMyTuto
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works">使い方</a>
+        <a href="#pricing">料金</a>
+        <a href="https://app.askmytuto.com/app" class="btn-cta" aria-label="アプリへ移動">アプリへ →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <div class="hero-badge fu">
+        <span class="badge-dot" aria-hidden="true"></span>
+        YouTubeで学ぶ開発者のために作られました
+      </div>
+      <h1 class="fu d1">
+        チュートリアルの巻き戻しは終わり。<br>
+        <span class="gradient">ただ質問しよう。</span>
+      </h1>
+      <p class="hero-tagline fu d2">YouTubeのチュートリアルをAIメンターに変換。</p>
+      <p class="hero-sub fu d2">視聴中のその瞬間について質問するだけ — タブを切り替えたり、Googleで検索したり、巻き戻したりせずに、即座に明確な回答が得られます。</p>
+      <div class="hero-cta fu d3">
+        <a href="https://app.askmytuto.com/auth" class="btn-primary" aria-label="クレジットカード不要で無料で始める">
+          無料で始める — クレジットカード不要
+        </a>
+        <a href="#how-it-works" class="btn-ghost" aria-label="AskMyTutoの動作を見る">
+          ▷ 動作を見る
+        </a>
+      </div>
+      <p class="hero-note fu d3">クレジットカード不要 · 無料プランあり · 数秒でセットアップ</p>
+    </div>
+
+    <div class="demo-wrap fu d3">
+      <div class="demo-window" role="img" aria-label="AskMyTutoアプリのデモ">
+        <div class="demo-bar" aria-hidden="true">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="url-bar">https://youtube.com/watch?v=react-hooks-tutorial</div>
+        </div>
+        <div class="demo-body">
+          <div class="url-input-row" aria-hidden="true">
+            <div class="url-input">https://youtube.com/watch?v=react-hooks-tutorial</div>
+            <div class="url-btn">読み込む</div>
+          </div>
+          <div class="timestamp-bar" aria-hidden="true">
+            <span class="ts-pill">12:34</span>
+            <span class="ts-label">React Hooks — 完全チュートリアル 2024</span>
+          </div>
+          <div class="chat" role="log" aria-live="polite">
+            <div class="msg">
+              <div class="av u" aria-label="ユーザー">U</div>
+              <div class="bubble">なぜここで <code>useMemo</code> ではなく <code>useEffect</code> を使うのですか？</div>
+            </div>
+            <div class="msg ai">
+              <div class="av ai" aria-label="AskMyTuto AI">✦</div>
+              <div class="bubble"><strong>12:34</strong> の時点で、講師が <code>useEffect</code>
+                を使っているのは、このコードが<em>副作用</em>（APIコール）を実行するためです。<code>useMemo</code>
+                はメモ化された値を返す計算に使います。データの取得は計算結果を返すのではなく外部アクションを起動するため、<code>useEffect</code> が正しいフックです。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <div class="skills-strip" aria-label="対応学習トピック">
+    <div class="container">
+      <p class="skills-label">学習中の開発者向け</p>
+      <div class="skills-row">
+        <span class="skill">Python</span><span class="skill">React</span>
+        <span class="skill">JavaScript</span><span class="skill">TypeScript</span>
+        <span class="skill">Node.js</span><span class="skill">Next.js</span>
+        <span class="skill">CSS / Tailwind</span><span class="skill">SQL</span>
+        <span class="skill">Docker</span><span class="skill">Git</span>
+        <span class="skill">SEO</span><span class="skill">+ あらゆるトピック</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="section" id="features" aria-labelledby="features-heading">
+    <div class="container">
+      <span class="s-label">機能</span>
+      <h2 id="features-heading">より速く学ぶために<br>必要なすべてが揃っています</h2>
+      <p class="s-sub">AskMyTutoはメモツールではありません。開発者が実際にチュートリアルを視聴する方法に基づいた、AI搭載の完全な学習環境です。</p>
+      <div class="features-wrap" role="list">
+        <article class="feat" role="listitem"><span class="feat-num">01</span>
+          <div class="feat-icon">▶</div>
+          <h3>チュートリアルのURLを貼り付け</h3>
+          <p>YouTubeのURLを貼り付けるだけ。他のソース（動画ファイル、ドキュメント）は近日対応予定。</p><span class="feat-badge">近日公開</span>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">02</span>
+          <div class="feat-icon">💬</div>
+          <h3>任意の瞬間について質問</h3>
+          <p>任意のタイムスタンプで「質問する」をクリック。画面に表示されている内容に基づいた文脈に沿った回答を取得。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">03</span>
+          <div class="feat-icon">{ }</div>
+          <h3>動画からコードを抽出</h3>
+          <p>動画に表示されているコードをクリーンにフォーマットして抽出 — すぐに使用可能。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">04</span>
+          <div class="feat-icon">🖼</div>
+          <h3>フレームを抽出</h3>
+          <p>任意の瞬間から正確なフレームを取得 — 図表、UIスクリーンショット、スライドなど。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">05</span>
+          <div class="feat-icon">📄</div>
+          <h3>PDFレポートを生成</h3>
+          <p>要約、Q&A、コードスニペット、タイムスタンプ、フレームを含む完全なコースレポートをエクスポート。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">06</span>
+          <div class="feat-icon">📝</div>
+          <h3>Notion・Markdownエクスポート</h3>
+          <p>NotionまたはMarkdownで構造化された要約を生成 — ドキュメントにすぐに追加可能。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">07</span>
+          <div class="feat-icon">🧠</div>
+          <h3>Q&Aとクイズを生成</h3>
+          <p>任意の動画から質問と回答を自動生成して理解度をテスト。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">08</span>
+          <div class="feat-icon">⚡</div>
+          <h3>コードの補完と改善</h3>
+          <p>動画のコードをAIに完成・リファクタリング・解説させることができます。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">09</span>
+          <div class="feat-icon">📍</div>
+          <h3>スマートな瞬間マーカー</h3>
+          <p>重要な瞬間が自動的に検出されタイムラインにマークされます。いつでもレビュー可能。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">10</span>
+          <div class="feat-icon">🗒</div>
+          <h3>自分のメモを追加</h3>
+          <p>任意のタイムスタンプに個人メモを追加。あなたの考えを正確な瞬間にリンク。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">11</span>
+          <div class="feat-icon">🗺</div>
+          <h3>学習パストラッカー</h3>
+          <p>進捗を確認し、学習した内容を追跡し、次に学ぶべきことを把握。</p>
+        </article>
+        <article class="feat" role="listitem"><span class="feat-num">12</span>
+          <div class="feat-icon">🌐</div>
+          <h3>あらゆる出力言語</h3>
+          <p>好みの言語でチャットし、回答を受け取る — 動画が別の言語でも対応。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <span class="s-label">使い方</span>
+      <h2 id="how-heading">行き詰まらずに学ぶ<br>4つのステップ</h2>
+      <p class="s-sub">拡張機能不要、セットアップ不要。URLを貼り付けてスマートに学習を始めましょう。</p>
+      <div class="steps" role="list">
+        <div class="step" role="listitem">
+          <div class="step-n">01</div>
+          <div class="step-body">
+            <h3>YouTubeのURLを貼り付け</h3>
+            <p>任意のYouTube URLを貼り付けると、AskMyTutoが完全なトランスクリプトを即座に取得し、インタラクティブセッションの準備をします。</p>
+          </div>
+        </div>
+        <div class="step" role="listitem">
+          <div class="step-n">02</div>
+          <div class="step-body">
+            <h3>自分のペースで視聴</h3>
+            <p>AIがリアルタイムで動画内の正確な位置を追跡します。困惑したときは巻き戻しは不要。</p>
+          </div>
+        </div>
+        <div class="step" role="listitem">
+          <div class="step-n">03</div>
+          <div class="step-body">
+            <h3>この瞬間について質問</h3>
+            <p>「質問する」をクリックして質問を入力。文脈は不要 — AIが画面に何が表示されているかを既に把握しています。</p>
+          </div>
+        </div>
+        <div class="step" role="listitem">
+          <div class="step-n">04</div>
+          <div class="step-body">
+            <h3>即座に明確な回答を取得</h3>
+            <p>数秒で文脈に沿った説明を受け取ります。その後、コードをエクスポートし、要約を生成するか、視聴を続けましょう。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- OUTPUTS -->
+  <section class="section" aria-labelledby="outputs-heading">
+    <div class="container">
+      <span class="s-label">エクスポートと出力</span>
+      <h2 id="outputs-heading">一度学んで、すべてを保存。</h2>
+      <p class="s-sub">すべてのセッションで参照・共有・活用できる永続的な知識成果物が生成されます。</p>
+      <div class="outputs-grid" role="list">
+        <article class="output-card" role="listitem"><span class="out-icon">📋</span>
+          <h3>完全PDFレポート</h3>
+          <p>要約、Q&A、コード、フレーム、タイムスタンプ、メモを含む完全なコースドキュメント。</p>
+        </article>
+        <article class="output-card" role="listitem"><span class="out-icon">🗃</span>
+          <h3>Notionエクスポート</h3>
+          <p>セクション、コードブロック、ハイライトを含む構造化されたNotionページ — インポート準備完了。</p>
+        </article>
+        <article class="output-card" role="listitem"><span class="out-icon">📄</span>
+          <h3>Markdownサマリー</h3>
+          <p>Obsidian、GitHub、Notionや任意のエディタと互換性のあるクリーンな.mdファイル。</p>
+        </article>
+        <article class="output-card" role="listitem"><span class="out-icon">{ }</span>
+          <h3>コード抽出</h3>
+          <p>動画からすべてのコードを抽出・フォーマット — IDEにコピー準備完了。</p>
+        </article>
+        <article class="output-card" role="listitem"><span class="out-icon">🖼</span>
+          <h3>フレームキャプチャ</h3>
+          <p>重要なビジュアルフレームが保存・添付 — 図表、スライド、UIの例が保存されます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LANGUAGE -->
+  <section class="section" aria-labelledby="lang-heading">
+    <div class="container">
+      <span class="s-label">多言語対応</span>
+      <h2 id="lang-heading">自分の言語で学習。<br>動画が別の言語でも。</h2>
+      <p class="s-sub">好みの出力言語を選択してチャット — チュートリアルが全く別の言語でも対応。AskMyTutoは単語だけでなく文脈を翻訳します。</p>
+      <div class="lang-bar">
+        <span class="lang-chip hi">🇯🇵 日本語</span>
+        <span class="lang-chip">🇬🇧 English</span><span class="lang-chip">🇸🇦 العربية</span>
+        <span class="lang-chip">🇧🇩 বাংলা</span><span class="lang-chip">🇩🇪 Deutsch</span>
+        <span class="lang-chip">🇫🇷 Français</span><span class="lang-chip">🇪🇸 Español</span>
+        <span class="lang-chip">🇵🇹 Português</span><span class="lang-chip">🇹🇷 Türkçe</span>
+        <span class="lang-chip">+ さらに多く</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing" aria-labelledby="pricing-heading">
+    <div class="container" style="text-align:center">
+      <span class="s-label">料金</span>
+      <h2 id="pricing-heading">シンプルな料金体系</h2>
+      <p class="s-sub" style="margin:0 auto">無料で始めよう。学ぶことが止められなくなったらアップグレード。</p>
+      <div class="pricing-row">
+        <article class="plan" aria-label="無料プラン">
+          <p class="plan-tier">無料</p>
+          <p class="plan-price">$0</p>
+          <p class="plan-desc">全機能を体験。</p>
+          <ul class="plan-list">
+            <li>1日の質問数に制限あり</li>
+            <li>動画インポート無制限</li>
+            <li>タイムスタンプ認識AI</li>
+            <li>基本的な瞬間保存</li>
+          </ul>
+          <a href="https://app.askmytuto.com/auth" class="plan-btn">無料で始める</a>
+        </article>
+        <article class="plan pro" aria-label="Proプラン、最も人気">
+          <div class="plan-badge-top">最も人気</div>
+          <p class="plan-tier">Pro</p>
+          <p class="plan-price">$9<sub>/月</sub></p>
+          <p class="plan-desc">制限なく学習。</p>
+          <ul class="plan-list">
+            <li>質問無制限</li>
+            <li>より速いAI応答</li>
+            <li>高度な説明</li>
+            <li>フルPDFレポートエクスポート</li>
+            <li>Notion・Markdownエクスポート</li>
+            <li>コード・フレーム抽出</li>
+            <li>新機能への早期アクセス</li>
+          </ul>
+          <a href="https://app.askmytuto.com/auth" class="plan-btn cta">Proにアップグレード →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container" style="text-align:center">
+      <span class="s-label">FAQ</span>
+      <h2 id="faq-heading">よくある質問</h2>
+      <nav class="faq" role="list">
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">AskMyTutoとは何ですか？ <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">
+            AskMyTutoはYouTubeチュートリアル向けのAI搭載学習アシスタントです。動画のタイムスタンプをリアルタイムで追跡し、視聴中の正確な瞬間について質問できます —
+            ページを離れることなく即座に文脈に沿った回答が得られます。</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">どんなYouTube動画でも使えますか？ <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">はい。公開されているYouTube
+            URLをペーストすれば、AskMyTutoが完全なトランスクリプトを即座に取得します。他のソース（動画ファイル、ドキュメント）も近日対応予定です。</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">自分の言語で回答を得られますか？ <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">はい。好みの出力言語を設定してその言語でチャットできます —
+            元のチュートリアルが全く別の言語でも対応。AskMyTutoは単語だけでなく文脈を翻訳します。</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">PDFエクスポートには何が含まれますか？ <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">エクスポートされるPDFは完全なコースレポートです:
+            構造化された要約、すべてのQ&A、抽出されたコードスニペット、キャプチャされたフレーム、個人メモ、スマートな瞬間マーカー、タイムスタンプが含まれます。</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <div class="faq-q" role="button" tabindex="0" aria-expanded="false">始めるにはクレジットカードが必要ですか？ <span
+              class="faq-toggle">+</span></div>
+          <div class="faq-a" aria-hidden="true">いいえ。無料プランではクレジットカードは不要です。1日の質問数に制限はありますが、コア機能に完全にアクセスできます。</div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block" aria-labelledby="cta-heading">
+    <div class="container">
+      <span class="s-label">始めよう</span>
+      <h2 id="cta-heading">チュートリアルに時間を無駄にするのをやめよう。<br>理解し始めよう。</h2>
+      <p>無料で始める。クレジットカード不要。セットアップ不要。</p>
+      <a href="https://app.askmytuto.com/auth" class="btn-primary"
+        style="font-size:16px;padding:15px 34px;display:inline-flex">
+        AskMyTutoを無料で試す →
+      </a>
+      <p class="hero-note" style="margin-top:16px">クレジットカード不要 · いつでもキャンセル · 無料プランあり</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="foot">
+      <div class="foot-logo"><span class="foot-dot"></span> AskMyTuto</div>
+      <p class="foot-copy">© 2026 AskMyTuto · 見て学ぶ開発者のために。</p>
+      <nav class="foot-langs" aria-label="言語バージョン">
+        <a href="https://askmytuto.com" hreflang="en">🇺🇸 EN</a>
+        <a href="https://askmytuto.com/ar" hreflang="ar">🇸🇦 AR</a>
+        <a href="https://askmytuto.com/jp" class="on" hreflang="ja">🇯🇵 JA</a>
+
+        <a href="https://askmytuto.com/fr" hreflang="fr">🇫🇷 FR</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }); }, { threshold: 0.08 });
+    document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+    const cardObs = new IntersectionObserver(entries => { entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }, i * 60); }); }, { threshold: 0.06 });
+    document.querySelectorAll('.feat,.output-card,.step,.plan').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity 0.5s ease,transform 0.5s ease'; cardObs.observe(el); });
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement; const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded', 'false'); i.querySelector('.faq-a').setAttribute('aria-hidden', 'true'); });
+        if (!open) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); item.querySelector('.faq-a').setAttribute('aria-hidden', 'false'); }
+      });
+      q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
+    });
+  </script>
+</body>
+
+</html>
