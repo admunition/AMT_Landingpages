@@ -311,6 +311,11 @@
       color: var(--text);
     }
 
+    .nav-links .btn-cta,
+    .nav-links .btn-cta:hover {
+      color: #0d0d0d;
+    }
+
     .btn-cta {
       background: var(--green);
       color: #0d0d0d;
@@ -373,16 +378,16 @@
     }
 
     h1 {
-      font-size: clamp(52px, 7vw, 90px);
-      font-weight: 800;
-      line-height: 1.0;
-      letter-spacing: -3px;
+      font-size: clamp(48px, 6.5vw, 84px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -4px;
       margin-bottom: 0;
       color: #ffffff;
     }
 
     h1 .gradient {
-      background: linear-gradient(90deg, var(--teal) 0%, var(--purple) 100%);
+      background: linear-gradient(90deg, #2dd4bf 0%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -390,7 +395,7 @@
 
     .hero-tagline {
       font-size: clamp(16px, 2vw, 20px);
-      color: var(--text2);
+      color: #c0c0c0;
       max-width: 580px;
       margin: 28px auto 16px;
       font-weight: 400;
@@ -398,7 +403,7 @@
 
     .hero-sub {
       font-size: 15px;
-      color: var(--text3);
+      color: #909090;
       max-width: 520px;
       margin: 0 auto 44px;
     }
@@ -660,12 +665,18 @@
     }
 
     h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
-      margin-bottom: 14px;
+      font-size: 1.875rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 1rem;
       color: var(--text);
+    }
+
+    @media (min-width: 640px) {
+      h2 {
+        font-size: 2.25rem;
+      }
     }
 
     .s-sub {
@@ -713,16 +724,16 @@
     }
 
     .feat-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      border: 1px solid var(--border2);
-      background: var(--surface);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      background: rgba(34, 211, 164, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      margin-bottom: 14px;
+      color: var(--green);
+      margin-bottom: 16px;
     }
 
     .feat h3 {
@@ -754,57 +765,63 @@
 
     /* ─── HOW IT WORKS ─── */
     .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
       margin-top: 56px;
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      overflow: hidden;
     }
 
     .step {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.18s;
-    }
-
-    .step:last-child {
-      border-bottom: none;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 28px 22px;
+      transition: background 0.18s, transform 0.18s;
     }
 
     .step:hover {
-      background: var(--surface);
+      background: var(--surface2);
+      transform: translateY(-2px);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .step-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(34, 211, 164, 0.12);
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      flex-shrink: 0;
     }
 
     .step-n {
       font-family: var(--mono);
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text3);
-      padding: 28px 24px;
-      border-right: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 30px;
-    }
-
-    .step-body {
-      padding: 28px 28px;
     }
 
     .step-body h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
       color: var(--text);
       letter-spacing: -0.3px;
+      line-height: 1.3;
     }
 
     .step-body p {
-      font-size: 14px;
-      color: var(--text2);
+      font-size: 13.5px;
+      color: #b8b8b8;
       line-height: 1.6;
     }
 
@@ -917,11 +934,87 @@
     }
 
     /* ─── PRICING ─── */
+    .pricing-h2-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: opacity 0.18s;
+    }
+
+    .pricing-h2-link:hover {
+      opacity: 0.75;
+    }
+
+    .pricing-h2-link::after {
+      content: '↗';
+      font-size: 0.6em;
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .trial-callout {
+      margin: 48px auto 0;
+      max-width: 380px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 40px 36px;
+      text-align: left;
+    }
+
+    .trial-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .trial-price {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trial-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text2);
+      letter-spacing: 0;
+    }
+
+    .trial-desc {
+      font-size: 14px;
+      color: var(--text2);
+      margin-bottom: 24px;
+    }
+
+    .trial-note {
+      font-size: 12px;
+      color: var(--text3);
+      margin-top: 14px;
+    }
+
+    .trial-note a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .trial-note a:hover {
+      text-decoration: underline;
+    }
+
     .pricing-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      max-width: 660px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      max-width: var(--max);
       margin: 52px auto 0;
     }
 
@@ -929,9 +1022,12 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--r-lg);
-      padding: 32px;
+      padding: 24px 18px;
       position: relative;
       transition: transform 0.18s;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
     }
 
     .plan:hover {
@@ -960,47 +1056,57 @@
     }
 
     .plan-tier {
-      font-size: 12px;
-      font-family: var(--mono);
-      color: var(--text3);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .plan-price {
-      font-size: 48px;
+      font-size: 28px;
       font-weight: 800;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       margin-bottom: 4px;
+      line-height: 1.1;
     }
 
     .plan-price sub {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 400;
       color: var(--text2);
+      letter-spacing: 0;
+    }
+
+    .plan-price-custom {
+      font-size: 22px;
+      letter-spacing: -1px;
     }
 
     .plan-desc {
-      font-size: 14px;
+      font-size: 12.5px;
       color: var(--text2);
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .plan-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      margin-bottom: 26px;
+      gap: 7px;
+      margin-bottom: 20px;
+      flex: 1;
     }
 
     .plan-list li {
-      font-size: 14px;
+      font-size: 12px;
       color: var(--text2);
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
     }
 
     .plan-list li::before {
@@ -1015,9 +1121,9 @@
 
     .plan-btn {
       width: 100%;
-      padding: 13px;
+      padding: 11px;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       cursor: pointer;
       font-family: var(--font);
@@ -1228,9 +1334,25 @@
       animation-delay: 0.24s;
     }
 
+    @media (max-width: 960px) {
+      .pricing-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pricing-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       .features-wrap {
         grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
       }
 
       .pricing-row {
@@ -1278,24 +1400,19 @@
     <div class="container">
       <div class="hero-badge fu">
         <span class="badge-dot" aria-hidden="true"></span>
-        Built for developers who learn from YouTube
+        Built for anyone learning from YouTube tutorials
       </div>
       <h1 class="fu d1">
-        Turn YouTube Tutorials Into a Structured Learning System.<br>
-        <span class="gradient">Stop Rewinding, Start Asking.</span>
+        Stop Rewinding Tutorials.<br>
+        <span class="gradient">Just Ask.</span>
       </h1>
-      <p class="hero-tagline fu d2">Stop wasting hours searching, rewatching, and forgetting.</p>
-      <p class="hero-sub fu d2">Learn faster with AI-powered timelines, notes, and smart video analysis.</p>
+      <p class="hero-tagline fu d2">Turn any YouTube tutorial into an interactive mentor.</p>
+      <p class="hero-sub fu d2">Ask questions about the exact moment you're watching — and get instant, clear answers without switching tabs, Googling, or rewatching.</p>
       <div class="hero-cta fu d3">
-        <a href="https://app.askmytuto.com/auth" class="btn-primary"
-          aria-label="Start AskMyTuto for free, no credit card needed">
-          Start Free — No Credit Card
-        </a>
         <a href="#how-it-works" class="btn-ghost" aria-label="See how AskMyTuto works">
           ▷ See it in action
         </a>
       </div>
-      <p class="hero-note fu d3">No credit card required · Free forever plan · Setup in seconds</p>
     </div>
 
     <!-- DEMO -->
@@ -1365,74 +1482,74 @@
       <div class="features-wrap" role="list">
         <article class="feat" role="listitem">
           <span class="feat-num">01</span>
-          <div class="feat-icon" aria-hidden="true">▶</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>Paste any tutorial source</h3>
           <p>Drop any YouTube URL. More sources (video files, docs) coming soon.</p>
           <span class="feat-badge">Soon: Docs, Video</span>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">02</span>
-          <div class="feat-icon" aria-hidden="true">💬</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.13 2 2 4.69 2 8c0 1.62.72 3.08 1.89 4.13L3 15l3.37-1.5A7.44 7.44 0 0 0 9 14c3.87 0 7-2.69 7-6S12.87 2 9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>Ask about any moment</h3>
           <p>Click "Ask" at any timestamp. Get a context-aware answer based on exactly what's on screen.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">03</span>
-          <div class="feat-icon" aria-hidden="true">{ }</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M6 4L2 9l4 5M12 4l4 5-4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Extract code from video</h3>
           <p>Pull out any code shown in the video — clean, formatted, and ready to use.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">04</span>
-          <div class="feat-icon" aria-hidden="true">🖼</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="6.5" cy="6.5" r="1.25" fill="currentColor"/><path d="M2 13l4-4 3 2.5 2.5-3L16 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Extract frames</h3>
           <p>Capture exact frames from any moment — diagrams, UI screenshots, slides, anything visual.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">05</span>
-          <div class="feat-icon" aria-hidden="true">📄</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4M6 10h6M6 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Generate full PDF reports</h3>
           <p>Export a complete course report with summaries, Q&A, code snippets, timestamps, and frames.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">06</span>
-          <div class="feat-icon" aria-hidden="true">📝</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V9m-1.5 1.5L9 9l1.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Notion & Markdown export</h3>
           <p>Generate structured summaries in Notion or Markdown — ready to drop into your docs.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">07</span>
-          <div class="feat-icon" aria-hidden="true">🧠</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 7a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="13" r="0.75" fill="currentColor"/></svg></div>
           <h3>Generate Q&A & quizzes</h3>
           <p>Auto-generate questions and answers from any video to test your understanding.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">08</span>
-          <div class="feat-icon" aria-hidden="true">⚡</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.5 2l-5 7.5H9l-1.5 6.5 6-8.5H10l.5-5.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>Complete & improve code</h3>
           <p>Ask the AI to finish, refactor, or explain any piece of code from the video.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">09</span>
-          <div class="feat-icon" aria-hidden="true">📍</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5A5 5 0 0 1 14 6.5c0 4-5 10-5 10S4 10.5 4 6.5a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="9" cy="6.5" r="2" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3>Smart moment markers</h3>
           <p>Key moments are automatically detected and marked on the timeline — review them any time.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">10</span>
-          <div class="feat-icon" aria-hidden="true">🗒</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M12.5 2.5a2.12 2.12 0 0 1 3 3L5.5 15.5l-4 1 1-4 10-10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>Add your own notes</h3>
           <p>Drop personal notes at any timestamp. Your thoughts, linked to the exact moment.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">11</span>
-          <div class="feat-icon" aria-hidden="true">🗺</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="4" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7c0 4 10 2 10 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Learning path tracker</h3>
           <p>See your progress, track what you've covered, and know what to learn next.</p>
         </article>
         <article class="feat" role="listitem">
           <span class="feat-num">12</span>
-          <div class="feat-icon" aria-hidden="true">🌐</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 2c-2 3-3 5-3 7s1 4 3 7M9 2c2 3 3 5 3 7s-1 4-3 7M2 9h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Any output language</h3>
           <p>Chat and receive answers in your preferred language — even if the video is in another one.</p>
         </article>
@@ -1450,34 +1567,51 @@
       <p class="s-sub">No extensions, no setup. Just paste a URL and start learning smarter.</p>
       <div class="steps" role="list">
         <div class="step" role="listitem">
-          <div class="step-n">01</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7.5 10.5a3.5 3.5 0 0 0 5 0l2-2a3.5 3.5 0 1 0-5-5L8.25 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10.5 7.5a3.5 3.5 0 0 0-5 0l-2 2a3.5 3.5 0 1 0 5 5l1.25-1.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">01</span>
+          </div>
           <div class="step-body">
             <h3>Paste any YouTube tutorial</h3>
-            <p>Drop any YouTube URL. AskMyTuto fetches the full transcript instantly and prepares your interactive
-              session.</p>
+            <p>Drop any YouTube tutorial URL. We fetch the transcript instantly.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">02</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">02</span>
+          </div>
           <div class="step-body">
-            <h3>Watch at your own pace</h3>
-            <p>The AI tracks your exact position in the video in real time. When you get confused, don't rewind.</p>
+            <h3>Play the video</h3>
+            <p>Watch and learn at your pace. When you get stuck, don't rewind.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">03</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 3.5l4 11 2-4.5 4.5-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 10.5l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13.5 2l.5 1.5M16 4.5l-1.5.5M16 7.5L14.5 7M11.5 1.5l-.5 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">03</span>
+          </div>
           <div class="step-body">
-            <h3>Ask about this moment</h3>
-            <p>Click "Ask" and type your question. No context needed — the AI already knows exactly what's on screen.
-            </p>
+            <h3>Click "Ask about this moment"</h3>
+            <p>Ask your question about the exact moment you're watching.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">04</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L10.5 7.5H16.5L11.5 11l2 6L9 13.5l-4.5 3.5 2-6L2 7.5H7.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">04</span>
+          </div>
           <div class="step-body">
-            <h3>Get a clear, instant answer</h3>
-            <p>Receive a context-aware explanation in seconds. Then export code, generate summaries, or keep watching.
-            </p>
+            <h3>Get an instant explanation</h3>
+            <p>Receive a clear, context-aware answer based on what you're watching.</p>
           </div>
         </div>
       </div>
@@ -1552,39 +1686,18 @@
   <section class="section" id="pricing" aria-labelledby="pricing-heading">
     <div class="container" style="text-align:center">
       <span class="s-label">Pricing</span>
-      <h2 id="pricing-heading">Simple Pricing</h2>
+      <h2 id="pricing-heading">
+        <a href="https://app.askmytuto.com/" class="pricing-h2-link" aria-label="Check our pricing at app.askmytuto.com">Simple Pricing</a>
+      </h2>
       <p class="s-sub" style="margin:0 auto">Start free. Upgrade when you can't stop learning.</p>
-      <div class="pricing-row">
-        <article class="plan" aria-label="Free plan">
-          <p class="plan-tier">Free</p>
-          <p class="plan-price">$0</p>
-          <p class="plan-desc">Try the full experience.</p>
-          <ul class="plan-list">
-            <li>Limited questions per day</li>
-            <li>Unlimited video imports</li>
-            <li>Timestamp-aware AI</li>
-            <li>Basic moment saving</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn"
-            aria-label="Start for free, no credit card required">Start Free</a>
-        </article>
-        <article class="plan pro" aria-label="Pro plan, most popular">
-          <div class="plan-badge-top">Most Popular</div>
-          <p class="plan-tier">Pro</p>
-          <p class="plan-price">$9<sub>/mo</sub></p>
-          <p class="plan-desc">Learn without limits.</p>
-          <ul class="plan-list">
-            <li>Unlimited questions</li>
-            <li>Faster AI responses</li>
-            <li>Advanced explanations</li>
-            <li>Full PDF report export</li>
-            <li>Notion & Markdown export</li>
-            <li>Code & frame extraction</li>
-            <li>Early access to new features</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn cta" aria-label="Get started with Pro plan">Go Pro
-            →</a>
-        </article>
+      <div class="trial-callout">
+        <p class="trial-tag"><span aria-hidden="true">⚡</span> Free Trial</p>
+        <p class="trial-price">$0 <span>/7 days</span></p>
+        <p class="trial-desc">Explore everything. No credit card required.</p>
+        <a href="https://app.askmytuto.com/auth" class="btn-primary" style="display:inline-flex" aria-label="Start free trial">
+          Start Free Trial →
+        </a>
+        <p class="trial-note">See all plans at <a href="https://app.askmytuto.com/">app.askmytuto.com →</a></p>
       </div>
     </div>
   </section>

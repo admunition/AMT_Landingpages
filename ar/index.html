@@ -100,11 +100,11 @@
       --surface2: #202020;
       --border: rgba(255, 255, 255, 0.08);
       --border2: rgba(255, 255, 255, 0.13);
-      --text: #e8e8e8;
-      --text2: #888;
-      --text3: #555;
-      --teal: #2dd4bf;
-      --purple: #8b5cf6;
+      --text: #ffffff;
+      --text2: #a0a0a0;
+      --text3: #666;
+      --teal: #22d3a4;
+      --purple: #0fa882;
       --green: #22d3a4;
       --green-dim: rgba(34, 211, 164, 0.12);
       --green-border: rgba(34, 211, 164, 0.3);
@@ -195,6 +195,11 @@
       color: var(--text);
     }
 
+    .nav-links .btn-cta,
+    .nav-links .btn-cta:hover {
+      color: #0d0d0d;
+    }
+
     .btn-cta {
       background: var(--green);
       color: #0d0d0d;
@@ -257,16 +262,16 @@
     }
 
     h1 {
-      font-size: clamp(44px, 6.5vw, 82px);
+      font-size: clamp(48px, 6.5vw, 84px);
       font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -1px;
+      line-height: 1.05;
+      letter-spacing: -4px;
       margin-bottom: 0;
-      color: #c8c8c8;
+      color: #ffffff;
     }
 
     h1 .gradient {
-      background: linear-gradient(90deg, var(--teal) 0%, var(--purple) 100%);
+      background: linear-gradient(90deg, #2dd4bf 0%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -274,7 +279,7 @@
 
     .hero-tagline {
       font-size: clamp(16px, 2vw, 20px);
-      color: var(--text2);
+      color: #c0c0c0;
       max-width: 580px;
       margin: 28px auto 16px;
       font-weight: 500;
@@ -282,7 +287,7 @@
 
     .hero-sub {
       font-size: 15px;
-      color: var(--text3);
+      color: #909090;
       max-width: 520px;
       margin: 0 auto 44px;
     }
@@ -556,12 +561,16 @@
     }
 
     h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      font-weight: 900;
-      letter-spacing: -1px;
-      line-height: 1.15;
-      margin-bottom: 14px;
+      font-size: 1.875rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 1rem;
       color: var(--text);
+    }
+
+    @media (min-width: 640px) {
+      h2 { font-size: 2.25rem; }
     }
 
     .s-sub {
@@ -611,16 +620,16 @@
     }
 
     .feat-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      border: 1px solid var(--border2);
-      background: var(--surface);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      background: rgba(34, 211, 164, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      margin-bottom: 14px;
+      color: var(--green);
+      margin-bottom: 16px;
     }
 
     .feat h3 {
@@ -651,59 +660,61 @@
 
     /* HOW IT WORKS */
     .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
       margin-top: 56px;
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      overflow: hidden;
     }
 
     .step {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.18s;
-      direction: rtl;
-    }
-
-    .step:last-child {
-      border-bottom: none;
-    }
-
-    .step:hover {
       background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 28px 22px;
+      transition: background 0.18s, transform 0.18s;
+    }
+
+    .step:hover { background: var(--surface2); transform: translateY(-2px); }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .step-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(34, 211, 164, 0.12);
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      flex-shrink: 0;
     }
 
     .step-n {
       font-family: var(--mono);
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text3);
-      padding: 28px 24px;
-      border-left: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 30px;
-      direction: ltr;
-    }
-
-    .step-body {
-      padding: 28px 28px;
     }
 
     .step-body h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       color: var(--text);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
     }
 
     .step-body p {
-      font-size: 14px;
-      color: var(--text2);
-      line-height: 1.7;
+      font-size: 13.5px;
+      color: #b8b8b8;
+      line-height: 1.6;
     }
 
     /* OUTPUTS */
@@ -815,6 +826,67 @@
     }
 
     /* PRICING */
+    .pricing-h2-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: opacity 0.18s;
+    }
+
+    .pricing-h2-link:hover { opacity: 0.75; }
+
+    .pricing-h2-link::after {
+      content: '↗';
+      font-size: 0.6em;
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .trial-callout {
+      margin: 48px auto 0;
+      max-width: 380px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 40px 36px;
+      text-align: left;
+    }
+
+    .trial-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .trial-price {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trial-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text2);
+      letter-spacing: 0;
+    }
+
+    .trial-desc { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+
+    .trial-note { font-size: 12px; color: var(--text3); margin-top: 14px; }
+
+    .trial-note a { color: var(--green); text-decoration: none; }
+
+    .trial-note a:hover { text-decoration: underline; }
+
     .pricing-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1132,6 +1204,10 @@
         grid-template-columns: 1fr;
       }
 
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .pricing-row {
         grid-template-columns: 1fr;
       }
@@ -1251,62 +1327,62 @@
         كيفية مشاهدة المطورين للشروحات فعلياً.</p>
       <div class="features-wrap" role="list">
         <article class="feat" role="listitem"><span class="feat-num">01</span>
-          <div class="feat-icon">▶</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>الصق أي مصدر شرح</h3>
           <p>أدرج أي رابط يوتيوب. مصادر أخرى (ملفات فيديو، وثائق) قريباً.</p><span class="feat-badge">قريباً</span>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">02</span>
-          <div class="feat-icon">💬</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.13 2 2 4.69 2 8c0 1.62.72 3.08 1.89 4.13L3 15l3.37-1.5A7.44 7.44 0 0 0 9 14c3.87 0 7-2.69 7-6S12.87 2 9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>اسأل عن أي لحظة</h3>
           <p>انقر "اسأل" عند أي طابع زمني. احصل على إجابة سياقية دقيقة بناءً على ما يظهر على الشاشة.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">03</span>
-          <div class="feat-icon">{ }</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M6 4L2 9l4 5M12 4l4 5-4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>استخرج الكود من الفيديو</h3>
           <p>استخرج أي كود يظهر في الفيديو — نظيف ومنسق وجاهز للاستخدام.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">04</span>
-          <div class="feat-icon">🖼</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="6.5" cy="6.5" r="1.25" fill="currentColor"/><path d="M2 13l4-4 3 2.5 2.5-3L16 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>استخراج الإطارات</h3>
           <p>التقط إطارات دقيقة من أي لحظة — مخططات، لقطات واجهة، شرائح، أي شيء بصري.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">05</span>
-          <div class="feat-icon">📄</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4M6 10h6M6 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>إنشاء تقارير PDF كاملة</h3>
           <p>صدّر تقريراً شاملاً للدورة مع ملخصات وأسئلة وإجابات وأكواد وطوابع زمنية وإطارات.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">06</span>
-          <div class="feat-icon">📝</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V9m-1.5 1.5L9 9l1.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>تصدير Notion و Markdown</h3>
           <p>أنشئ ملخصات منظمة في Notion أو Markdown — جاهزة للإدراج في وثائقك.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">07</span>
-          <div class="feat-icon">🧠</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 7a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="13" r="0.75" fill="currentColor"/></svg></div>
           <h3>أسئلة وإجابات واختبارات</h3>
           <p>أنشئ تلقائياً أسئلة وإجابات من أي فيديو لاختبار فهمك.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">08</span>
-          <div class="feat-icon">⚡</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.5 2l-5 7.5H9l-1.5 6.5 6-8.5H10l.5-5.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>إكمال الكود وتحسينه</h3>
           <p>اطلب من الذكاء الاصطناعي إكمال أو إعادة هيكلة أو شرح أي كود من الفيديو.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">09</span>
-          <div class="feat-icon">📍</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5A5 5 0 0 1 14 6.5c0 4-5 10-5 10S4 10.5 4 6.5a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="9" cy="6.5" r="2" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3>علامات اللحظات الذكية</h3>
           <p>يتم اكتشاف اللحظات المهمة تلقائياً ووضع علامات عليها على الجدول الزمني.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">10</span>
-          <div class="feat-icon">🗒</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M12.5 2.5a2.12 2.12 0 0 1 3 3L5.5 15.5l-4 1 1-4 10-10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>أضف ملاحظاتك الخاصة</h3>
           <p>أضف ملاحظات شخصية عند أي طابع زمني. أفكارك، مرتبطة باللحظة الدقيقة.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">11</span>
-          <div class="feat-icon">🗺</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="4" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7c0 4 10 2 10 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>متتبع مسار التعلم</h3>
           <p>راقب تقدمك، تتبع ما غطّيته، واعرف ما تحتاج لتعلمه بعد ذلك.</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">12</span>
-          <div class="feat-icon">🌐</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 2c-2 3-3 5-3 7s1 4 3 7M9 2c2 3 3 5 3 7s-1 4-3 7M2 9h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>أي لغة للإخراج</h3>
           <p>تحدث واحصل على إجابات بلغتك المفضلة — حتى لو كان الفيديو بلغة أخرى.</p>
         </article>
@@ -1324,28 +1400,48 @@
       <p class="s-sub">لا إضافات، لا إعداد. فقط الصق رابطاً وابدأ التعلم بذكاء.</p>
       <div class="steps" role="list">
         <div class="step" role="listitem">
-          <div class="step-n">01</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7.5 10.5a3.5 3.5 0 0 0 5 0l2-2a3.5 3.5 0 1 0-5-5L8.25 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10.5 7.5a3.5 3.5 0 0 0-5 0l-2 2a3.5 3.5 0 1 0 5 5l1.25-1.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">01</span>
+          </div>
           <div class="step-body">
             <h3>الصق أي شرح يوتيوب</h3>
             <p>أدرج أي رابط يوتيوب. يجلب AskMyTuto النص الكامل فوراً ويُعدّ جلستك التفاعلية.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">02</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">02</span>
+          </div>
           <div class="step-body">
             <h3>شاهد بوتيرتك الخاصة</h3>
             <p>يتتبع الذكاء الاصطناعي موضعك الدقيق في الفيديو في الوقت الفعلي. حين تشعر بالارتباك، لا تُعِد التشغيل.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">03</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 3.5l4 11 2-4.5 4.5-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 10.5l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13.5 2l.5 1.5M16 4.5l-1.5.5M16 7.5L14.5 7M11.5 1.5l-.5 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">03</span>
+          </div>
           <div class="step-body">
             <h3>اسأل عن هذه اللحظة</h3>
             <p>انقر "اسأل" واكتب سؤالك. لا تحتاج لسياق — الذكاء الاصطناعي يعرف بالضبط ما يظهر على الشاشة.</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">04</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L10.5 7.5H16.5L11.5 11l2 6L9 13.5l-4.5 3.5 2-6L2 7.5H7.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">04</span>
+          </div>
           <div class="step-body">
             <h3>احصل على إجابة واضحة وفورية</h3>
             <p>استقبل شرحاً سياقياً في ثوانٍ. ثم صدّر الكود، أنشئ ملخصات، أو واصل المشاهدة.</p>
@@ -1414,37 +1510,18 @@
   <section class="section" id="pricing" aria-labelledby="pricing-heading">
     <div class="container" style="text-align:center">
       <span class="s-label">الأسعار</span>
-      <h2 id="pricing-heading">أسعار بسيطة</h2>
+      <h2 id="pricing-heading">
+        <a href="https://app.askmytuto.com/" class="pricing-h2-link" aria-label="اطلع على أسعارنا في app.askmytuto.com">أسعار بسيطة</a>
+      </h2>
       <p class="s-sub" style="margin:0 auto">ابدأ مجاناً. طوّر اشتراكك حين لا تستطيع التوقف عن التعلم.</p>
-      <div class="pricing-row">
-        <article class="plan" aria-label="الخطة المجانية">
-          <p class="plan-tier">مجاني</p>
-          <p class="plan-price" style="direction:ltr;text-align:center">$0</p>
-          <p class="plan-desc">جرّب التجربة الكاملة.</p>
-          <ul class="plan-list">
-            <li>أسئلة محدودة يومياً</li>
-            <li>استيراد فيديو غير محدود</li>
-            <li>ذكاء اصطناعي يعي الطابع الزمني</li>
-            <li>حفظ اللحظات الأساسية</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn">ابدأ مجاناً</a>
-        </article>
-        <article class="plan pro" aria-label="الخطة الاحترافية">
-          <div class="plan-badge-top">الأكثر شعبية</div>
-          <p class="plan-tier">برو</p>
-          <p class="plan-price" style="direction:ltr;text-align:center">$9<sub>/شهر</sub></p>
-          <p class="plan-desc">تعلّم بلا حدود.</p>
-          <ul class="plan-list">
-            <li>أسئلة غير محدودة</li>
-            <li>استجابات ذكاء اصطناعي أسرع</li>
-            <li>شروحات متقدمة</li>
-            <li>تصدير تقرير PDF كامل</li>
-            <li>تصدير Notion و Markdown</li>
-            <li>استخراج الكود والإطارات</li>
-            <li>وصول مبكر للميزات الجديدة</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn cta">الترقية إلى برو ←</a>
-        </article>
+      <div class="trial-callout">
+        <p class="trial-tag"><span aria-hidden="true">⚡</span> تجربة مجانية</p>
+        <p class="trial-price">$0 <span>/7 أيام</span></p>
+        <p class="trial-desc">استكشف كل شيء. لا بطاقة ائتمان مطلوبة.</p>
+        <a href="https://app.askmytuto.com/auth" class="btn-primary" style="display:inline-flex" aria-label="ابدأ التجربة المجانية">
+          ابدأ التجربة المجانية →
+        </a>
+        <p class="trial-note">اطلع على جميع الخطط في <a href="https://app.askmytuto.com/">app.askmytuto.com →</a></p>
       </div>
     </div>
   </section>

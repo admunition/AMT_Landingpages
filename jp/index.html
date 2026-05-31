@@ -9,7 +9,7 @@
   <title>AskMyTuto — チュートリアルを巻き戻すのをやめよう。ただ質問しよう。</title>
   <meta name="description"
     content="YouTubeのチュートリアルをAIメンターに変換。見ているその瞬間に質問して、即座に明確な回答を取得。コード抽出・PDFレポート生成・3倍速で学習。無料で始められます。">
-<meta name="author" content="AskMyTuto">
+  <meta name="author" content="AskMyTuto">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0d0d0d">
   <link rel="canonical" href="https://askmytuto.com/jp">
@@ -96,11 +96,11 @@
       --surface2: #202020;
       --border: rgba(255, 255, 255, 0.08);
       --border2: rgba(255, 255, 255, 0.13);
-      --text: #e8e8e8;
-      --text2: #888;
-      --text3: #555;
-      --teal: #2dd4bf;
-      --purple: #8b5cf6;
+      --text: #ffffff;
+      --text2: #a0a0a0;
+      --text3: #666;
+      --teal: #22d3a4;
+      --purple: #0fa882;
       --green: #22d3a4;
       --green-dim: rgba(34, 211, 164, 0.12);
       --green-border: rgba(34, 211, 164, 0.3);
@@ -190,6 +190,11 @@
       color: var(--text);
     }
 
+    .nav-links .btn-cta,
+    .nav-links .btn-cta:hover {
+      color: #0d0d0d;
+    }
+
     .btn-cta {
       background: var(--green);
       color: #0d0d0d;
@@ -256,11 +261,11 @@
       line-height: 1.15;
       letter-spacing: -1px;
       margin-bottom: 0;
-      color: #c8c8c8;
+      color: #ffffff;
     }
 
     h1 .gradient {
-      background: linear-gradient(90deg, var(--teal) 0%, var(--purple) 100%);
+      background: linear-gradient(90deg, #2dd4bf 0%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -268,7 +273,7 @@
 
     .hero-tagline {
       font-size: clamp(16px, 2vw, 20px);
-      color: var(--text2);
+      color: #c0c0c0;
       max-width: 580px;
       margin: 28px auto 16px;
       font-weight: 400;
@@ -276,7 +281,7 @@
 
     .hero-sub {
       font-size: 15px;
-      color: var(--text3);
+      color: #909090;
       max-width: 520px;
       margin: 0 auto 44px;
     }
@@ -534,12 +539,16 @@
     }
 
     h2 {
-      font-size: clamp(26px, 3.5vw, 42px);
-      font-weight: 900;
+      font-size: 1.875rem;
+      font-weight: 700;
       letter-spacing: -0.5px;
       line-height: 1.2;
-      margin-bottom: 14px;
+      margin-bottom: 1rem;
       color: var(--text);
+    }
+
+    @media (min-width: 640px) {
+      h2 { font-size: 2.25rem; }
     }
 
     .s-sub {
@@ -586,16 +595,16 @@
     }
 
     .feat-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      border: 1px solid var(--border2);
-      background: var(--surface);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      background: rgba(34, 211, 164, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      margin-bottom: 14px;
+      color: var(--green);
+      margin-bottom: 16px;
     }
 
     .feat h3 {
@@ -625,57 +634,61 @@
     }
 
     .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
       margin-top: 56px;
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      overflow: hidden;
     }
 
     .step {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.18s;
-    }
-
-    .step:last-child {
-      border-bottom: none;
-    }
-
-    .step:hover {
       background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 28px 22px;
+      transition: background 0.18s, transform 0.18s;
+    }
+
+    .step:hover { background: var(--surface2); transform: translateY(-2px); }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .step-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(34, 211, 164, 0.12);
+      border: 1px solid rgba(34, 211, 164, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      flex-shrink: 0;
     }
 
     .step-n {
       font-family: var(--mono);
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text3);
-      padding: 28px 24px;
-      border-right: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 30px;
-    }
-
-    .step-body {
-      padding: 28px 28px;
     }
 
     .step-body h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       color: var(--text);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
     }
 
     .step-body p {
-      font-size: 14px;
-      color: var(--text2);
-      line-height: 1.7;
+      font-size: 13.5px;
+      color: #b8b8b8;
+      line-height: 1.6;
     }
 
     .outputs-grid {
@@ -782,6 +795,67 @@
       border-color: var(--border2);
       color: var(--text);
     }
+
+    .pricing-h2-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: opacity 0.18s;
+    }
+
+    .pricing-h2-link:hover { opacity: 0.75; }
+
+    .pricing-h2-link::after {
+      content: '↗';
+      font-size: 0.6em;
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .trial-callout {
+      margin: 48px auto 0;
+      max-width: 380px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--r-lg);
+      padding: 40px 36px;
+      text-align: left;
+    }
+
+    .trial-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .trial-price {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trial-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text2);
+      letter-spacing: 0;
+    }
+
+    .trial-desc { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+
+    .trial-note { font-size: 12px; color: var(--text3); margin-top: 14px; }
+
+    .trial-note a { color: var(--green); text-decoration: none; }
+
+    .trial-note a:hover { text-decoration: underline; }
 
     .pricing-row {
       display: grid;
@@ -1094,6 +1168,8 @@
         grid-template-columns: 1fr;
       }
 
+      .steps { grid-template-columns: 1fr 1fr; }
+
       .pricing-row {
         grid-template-columns: 1fr;
       }
@@ -1209,62 +1285,62 @@
       <p class="s-sub">AskMyTutoはメモツールではありません。開発者が実際にチュートリアルを視聴する方法に基づいた、AI搭載の完全な学習環境です。</p>
       <div class="features-wrap" role="list">
         <article class="feat" role="listitem"><span class="feat-num">01</span>
-          <div class="feat-icon">▶</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>チュートリアルのURLを貼り付け</h3>
           <p>YouTubeのURLを貼り付けるだけ。他のソース（動画ファイル、ドキュメント）は近日対応予定。</p><span class="feat-badge">近日公開</span>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">02</span>
-          <div class="feat-icon">💬</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.13 2 2 4.69 2 8c0 1.62.72 3.08 1.89 4.13L3 15l3.37-1.5A7.44 7.44 0 0 0 9 14c3.87 0 7-2.69 7-6S12.87 2 9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>任意の瞬間について質問</h3>
           <p>任意のタイムスタンプで「質問する」をクリック。画面に表示されている内容に基づいた文脈に沿った回答を取得。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">03</span>
-          <div class="feat-icon">{ }</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M6 4L2 9l4 5M12 4l4 5-4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>動画からコードを抽出</h3>
           <p>動画に表示されているコードをクリーンにフォーマットして抽出 — すぐに使用可能。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">04</span>
-          <div class="feat-icon">🖼</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="6.5" cy="6.5" r="1.25" fill="currentColor"/><path d="M2 13l4-4 3 2.5 2.5-3L16 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>フレームを抽出</h3>
           <p>任意の瞬間から正確なフレームを取得 — 図表、UIスクリーンショット、スライドなど。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">05</span>
-          <div class="feat-icon">📄</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4M6 10h6M6 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>PDFレポートを生成</h3>
           <p>要約、Q&A、コードスニペット、タイムスタンプ、フレームを含む完全なコースレポートをエクスポート。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">06</span>
-          <div class="feat-icon">📝</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 2v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V9m-1.5 1.5L9 9l1.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Notion・Markdownエクスポート</h3>
           <p>NotionまたはMarkdownで構造化された要約を生成 — ドキュメントにすぐに追加可能。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">07</span>
-          <div class="feat-icon">🧠</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 7a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="13" r="0.75" fill="currentColor"/></svg></div>
           <h3>Q&Aとクイズを生成</h3>
           <p>任意の動画から質問と回答を自動生成して理解度をテスト。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">08</span>
-          <div class="feat-icon">⚡</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.5 2l-5 7.5H9l-1.5 6.5 6-8.5H10l.5-5.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>コードの補完と改善</h3>
           <p>動画のコードをAIに完成・リファクタリング・解説させることができます。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">09</span>
-          <div class="feat-icon">📍</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5A5 5 0 0 1 14 6.5c0 4-5 10-5 10S4 10.5 4 6.5a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="9" cy="6.5" r="2" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3>スマートな瞬間マーカー</h3>
           <p>重要な瞬間が自動的に検出されタイムラインにマークされます。いつでもレビュー可能。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">10</span>
-          <div class="feat-icon">🗒</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M12.5 2.5a2.12 2.12 0 0 1 3 3L5.5 15.5l-4 1 1-4 10-10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>自分のメモを追加</h3>
           <p>任意のタイムスタンプに個人メモを追加。あなたの考えを正確な瞬間にリンク。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">11</span>
-          <div class="feat-icon">🗺</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="4" cy="5" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7c0 4 10 2 10 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>学習パストラッカー</h3>
           <p>進捗を確認し、学習した内容を追跡し、次に学ぶべきことを把握。</p>
         </article>
         <article class="feat" role="listitem"><span class="feat-num">12</span>
-          <div class="feat-icon">🌐</div>
+          <div class="feat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 2c-2 3-3 5-3 7s1 4 3 7M9 2c2 3 3 5 3 7s-1 4-3 7M2 9h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>あらゆる出力言語</h3>
           <p>好みの言語でチャットし、回答を受け取る — 動画が別の言語でも対応。</p>
         </article>
@@ -1282,28 +1358,48 @@
       <p class="s-sub">拡張機能不要、セットアップ不要。URLを貼り付けてスマートに学習を始めましょう。</p>
       <div class="steps" role="list">
         <div class="step" role="listitem">
-          <div class="step-n">01</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7.5 10.5a3.5 3.5 0 0 0 5 0l2-2a3.5 3.5 0 1 0-5-5L8.25 4.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10.5 7.5a3.5 3.5 0 0 0-5 0l-2 2a3.5 3.5 0 1 0 5 5l1.25-1.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">01</span>
+          </div>
           <div class="step-body">
             <h3>YouTubeのURLを貼り付け</h3>
             <p>任意のYouTube URLを貼り付けると、AskMyTutoが完全なトランスクリプトを即座に取得し、インタラクティブセッションの準備をします。</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">02</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 3.5L14.5 9 5 14.5V3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">02</span>
+          </div>
           <div class="step-body">
             <h3>自分のペースで視聴</h3>
             <p>AIがリアルタイムで動画内の正確な位置を追跡します。困惑したときは巻き戻しは不要。</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">03</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 3.5l4 11 2-4.5 4.5-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 10.5l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="step-n">03</span>
+          </div>
           <div class="step-body">
             <h3>この瞬間について質問</h3>
             <p>「質問する」をクリックして質問を入力。文脈は不要 — AIが画面に何が表示されているかを既に把握しています。</p>
           </div>
         </div>
         <div class="step" role="listitem">
-          <div class="step-n">04</div>
+          <div class="step-header">
+            <div class="step-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L10.5 7.5H16.5L11.5 11l2 6L9 13.5l-4.5 3.5 2-6L2 7.5H7.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="step-n">04</span>
+          </div>
           <div class="step-body">
             <h3>即座に明確な回答を取得</h3>
             <p>数秒で文脈に沿った説明を受け取ります。その後、コードをエクスポートし、要約を生成するか、視聴を続けましょう。</p>
@@ -1371,37 +1467,18 @@
   <section class="section" id="pricing" aria-labelledby="pricing-heading">
     <div class="container" style="text-align:center">
       <span class="s-label">料金</span>
-      <h2 id="pricing-heading">シンプルな料金体系</h2>
+      <h2 id="pricing-heading">
+        <a href="https://app.askmytuto.com/" class="pricing-h2-link">シンプルな料金体系</a>
+      </h2>
       <p class="s-sub" style="margin:0 auto">無料で始めよう。学ぶことが止められなくなったらアップグレード。</p>
-      <div class="pricing-row">
-        <article class="plan" aria-label="無料プラン">
-          <p class="plan-tier">無料</p>
-          <p class="plan-price">$0</p>
-          <p class="plan-desc">全機能を体験。</p>
-          <ul class="plan-list">
-            <li>1日の質問数に制限あり</li>
-            <li>動画インポート無制限</li>
-            <li>タイムスタンプ認識AI</li>
-            <li>基本的な瞬間保存</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn">無料で始める</a>
-        </article>
-        <article class="plan pro" aria-label="Proプラン、最も人気">
-          <div class="plan-badge-top">最も人気</div>
-          <p class="plan-tier">Pro</p>
-          <p class="plan-price">$9<sub>/月</sub></p>
-          <p class="plan-desc">制限なく学習。</p>
-          <ul class="plan-list">
-            <li>質問無制限</li>
-            <li>より速いAI応答</li>
-            <li>高度な説明</li>
-            <li>フルPDFレポートエクスポート</li>
-            <li>Notion・Markdownエクスポート</li>
-            <li>コード・フレーム抽出</li>
-            <li>新機能への早期アクセス</li>
-          </ul>
-          <a href="https://app.askmytuto.com/auth" class="plan-btn cta">Proにアップグレード →</a>
-        </article>
+      <div class="trial-callout">
+        <p class="trial-tag"><span aria-hidden="true">⚡</span> 無料トライアル</p>
+        <p class="trial-price">$0 <span>/7日間</span></p>
+        <p class="trial-desc">すべての機能を体験。クレジットカード不要。</p>
+        <a href="https://app.askmytuto.com/auth" class="btn-primary" style="display:inline-flex">
+          無料で試す →
+        </a>
+        <p class="trial-note">全プランは <a href="https://app.askmytuto.com/">app.askmytuto.com →</a> で確認</p>
       </div>
     </div>
   </section>
