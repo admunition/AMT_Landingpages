@@ -1,0 +1,33 @@
+# AskMyTuto
+
+> AskMyTuto turns any YouTube tutorial into an interactive AI mentor. Paste a video URL, ask questions at any timestamp, extract code, generate summaries, export PDFs, and learn up to 3x faster — without rewinding or switching tabs.
+
+## Product
+
+- [Home — English](https://askmytuto.com/): Main landing page. Features, how it works, pricing, and FAQ.
+- [Home — Arabic](https://askmytuto.com/ar/): Full Arabic-language landing page.
+- [Home — Japanese](https://askmytuto.com/jp/): Full Japanese-language landing page.
+- [Home — French](https://askmytuto.com/fr/): Full French-language landing page.
+- [App](https://app.askmytuto.com/): The main web application.
+- [Sign Up / Login](https://app.askmytuto.com/auth): Free trial, no credit card required.
+- [Pricing](https://app.askmytuto.com/): Free plan plus paid tiers. 7-day free trial with full access.
+- [Blog](https://app.askmytuto.com/blog): Articles on learning faster with AI and tutorial-based education.
+- [Privacy Policy](https://app.askmytuto.com/privacy): Data handling and privacy details.
+- [Terms of Service](https://app.askmytuto.com/terms): Usage terms and conditions.
+
+## Key Features
+
+- Ask questions about any moment in a YouTube tutorial and get instant, context-aware answers
+- Extract code shown on screen — clean and formatted
+- Capture exact video frames (diagrams, slides, UI screenshots)
+- Generate full PDF reports with summaries, Q&A, code snippets, timestamps, and frames
+- Export to Notion or Markdown
+- Auto-generate Q&A and quizzes from any video
+- Smart moment markers automatically detected on the video timeline
+- Add personal timestamped notes
+- Learning path tracker to monitor progress
+- Answers available in any language, regardless of the video's language
+
+## Supported Topics
+
+Primarily used by developers learning JavaScript, React, Python, TypeScript, Node.js, CSS, and other programming topics via YouTube tutorials.
