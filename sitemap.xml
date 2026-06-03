@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ── English (canonical / x-default) ── -->
+  <url>
+    <loc>https://askmytuto.com</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://askmytuto.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://askmytuto.com/jp"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://askmytuto.com/fr"/>
+    <image:image>
+      <image:loc>https://askmytuto.com/og-image.png</image:loc>
+      <image:title>AskMyTuto — Stop Rewinding Tutorials. Just Ask.</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── Arabic ── -->
+  <url>
+    <loc>https://askmytuto.com/ar</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://askmytuto.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://askmytuto.com/jp"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://askmytuto.com/fr"/>
+    <image:image>
+      <image:loc>https://askmytuto.com/og-image.png</image:loc>
+      <image:title>AskMyTuto — توقف عن إعادة تشغيل الدروس. فقط اسأل.</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── Japanese ── -->
+  <url>
+    <loc>https://askmytuto.com/jp</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://askmytuto.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://askmytuto.com/jp"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://askmytuto.com/fr"/>
+    <image:image>
+      <image:loc>https://askmytuto.com/og-image.png</image:loc>
+      <image:title>AskMyTuto — チュートリアルを巻き戻すのをやめて。ただ聞いて。</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── French ── -->
+  <url>
+    <loc>https://askmytuto.com/fr</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://askmytuto.com"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://askmytuto.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://askmytuto.com/jp"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://askmytuto.com/fr"/>
+    <image:image>
+      <image:loc>https://askmytuto.com/og-image.png</image:loc>
+      <image:title>AskMyTuto — Arrête de rembobiner les tutoriels. Demande juste.</image:title>
+    </image:image>
+  </url>
+
+</urlset>
