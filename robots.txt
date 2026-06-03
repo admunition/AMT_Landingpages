@@ -1,15 +1,9 @@
-# ──────────────────────────────────────────────
-#  robots.txt — askmytuto.com
-#  Updated: 2026-06-03
-# ──────────────────────────────────────────────
+# robots.txt - askmytuto.com
 
-# ── General crawlers ──────────────────────────
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
-Crawl-delay: 10
 
-# ── Google ────────────────────────────────────
 User-agent: Googlebot
 Allow: /
 Disallow: /cdn-cgi/
@@ -17,15 +11,10 @@ Disallow: /cdn-cgi/
 User-agent: Googlebot-Image
 Allow: /og-image.png
 
-# ── Bing ──────────────────────────────────────
 User-agent: Bingbot
 Allow: /
 Disallow: /cdn-cgi/
-Crawl-delay: 10
 
-# ── AI training bots (opt-out) ────────────────
-# Protects content from being used in LLM training datasets
-# without affecting search ranking signals.
 User-agent: GPTBot
 Disallow: /
 
@@ -50,12 +39,11 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# ── Aggressive scrapers ───────────────────────
 User-agent: AhrefsBot
-Crawl-delay: 30
+Allow: /
 
 User-agent: SemrushBot
-Crawl-delay: 30
+Allow: /
 
 User-agent: MJ12bot
 Disallow: /
@@ -63,5 +51,4 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# ── Sitemap ───────────────────────────────────
 Sitemap: https://askmytuto.com/sitemap.xml
