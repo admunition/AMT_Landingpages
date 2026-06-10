@@ -1334,6 +1334,20 @@
       border-color: rgba(34, 211, 164, 0.4);
     }
 
+    .foot-legal {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot-legal a {
+      font-size: 12px;
+      color: var(--text3);
+      transition: color 0.18s;
+    }
+
+    .foot-legal a:hover { color: var(--text2); }
+
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from {
@@ -1869,11 +1883,15 @@
         AskMyTuto
       </div>
       <p class="foot-copy">© 2026 AskMyTuto · Built for developers who learn by watching.</p>
+      <nav class="foot-legal" aria-label="Legal links">
+        <a href="https://app.askmytuto.com/privacy">Privacy Policy</a>
+        <a href="https://app.askmytuto.com/terms">Terms</a>
+        <a href="/privacy-extension">Extension Privacy</a>
+      </nav>
       <nav class="foot-langs" aria-label="Language versions">
         <a href="https://askmytuto.com" class="on" hreflang="en">🇺🇸 EN</a>
         <a href="https://askmytuto.com/ar" hreflang="ar">🇸🇦 AR</a>
-        <a href="https://askmytuto.com/jp" hreflang="ja">🇯🇵 JP</a>
-
+        <a href="https://askmytuto.com/jp/" hreflang="ja">🇯🇵 JP</a>
         <a href="https://askmytuto.com/fr" hreflang="fr">🇫🇷 FR</a>
       </nav>
     </div>

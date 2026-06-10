@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Extension Privacy Policy — AskMyTuto</title>
+  <meta name="description" content="Privacy policy for the AskMyTuto browser extension. Learn what data the extension accesses, what is sent to our servers, and how your privacy is protected.">
+  <meta name="author" content="AskMyTuto">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://askmytuto.com/privacy-extension">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="alternate" type="text/plain" href="/llms.txt">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://askmytuto.com/privacy-extension">
+  <meta property="og:title" content="Extension Privacy Policy — AskMyTuto">
+  <meta property="og:description" content="Privacy policy for the AskMyTuto browser extension.">
+  <meta property="og:image" content="https://askmytuto.com/og-image.png">
+  <meta property="og:site_name" content="AskMyTuto">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Extension Privacy Policy — AskMyTuto",
+  "url": "https://askmytuto.com/privacy-extension",
+  "description": "Privacy policy for the AskMyTuto browser extension.",
+  "isPartOf": {"@type":"WebSite","url":"https://askmytuto.com","name":"AskMyTuto"},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://askmytuto.com"},
+      {"@type":"ListItem","position":2,"name":"Extension Privacy","item":"https://askmytuto.com/privacy-extension"}
+    ]
+  }
+}
+</script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg: #0d0d0d;
+      --bg2: #111111;
+      --surface: #1a1a1a;
+      --border: rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.13);
+      --text: #ffffff;
+      --text2: #a0a0a0;
+      --text3: #666;
+      --teal: #22d3a4;
+      --green: #22d3a4;
+      --font: 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --max: 760px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(24px);
+      background: rgba(13,13,13,0.9);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo-icon { font-size: 18px; }
+
+    .btn-cta {
+      background: var(--teal);
+      color: #000;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: opacity 0.18s;
+      text-decoration: none;
+    }
+
+    .btn-cta:hover { opacity: 0.85; text-decoration: none; }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 72px 32px 96px;
+    }
+
+    .page-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--text3);
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 40px 0 12px;
+      color: var(--text);
+    }
+
+    p { color: var(--text2); margin-bottom: 16px; }
+
+    ul {
+      color: var(--text2);
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    ul li { margin-bottom: 8px; }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 24px;
+    }
+
+    .pill {
+      font-size: 12px;
+      font-family: var(--mono);
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(34,211,164,0.3);
+      background: rgba(34,211,164,0.06);
+      color: var(--teal);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-left: 3px solid var(--teal);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      color: var(--text2);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 0;
+    }
+
+    .foot {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .foot-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .foot-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .foot-copy { font-size: 13px; color: var(--text3); }
+
+    .foot-legal {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot-legal a {
+      font-size: 12px;
+      color: var(--text3);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .foot-legal a:hover { color: var(--text2); text-decoration: none; }
+    .foot-legal a.on { color: var(--teal); }
+
+    .foot-langs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .foot-langs a {
+      font-size: 12px;
+      color: var(--text3);
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      transition: color 0.18s, border-color 0.18s;
+      text-decoration: none;
+    }
+
+    .foot-langs a:hover { color: var(--text2); border-color: var(--border2); }
+
+    @media (max-width: 600px) {
+      .container { padding: 48px 20px 72px; }
+      .nav-inner { padding: 0 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="https://askmytuto.com" class="logo" aria-label="AskMyTuto home">
+        <div class="logo-icon" aria-hidden="true">📖</div>
+        AskMyTuto
+      </a>
+      <a href="https://app.askmytuto.com/app" class="btn-cta" aria-label="Go to AskMyTuto app">Go to App →</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <p class="page-label">Legal</p>
+      <h1>Extension Privacy Policy</h1>
+      <p class="updated">Last updated: June 4, 2026</p>
+
+      <div class="callout">
+        Short version: The AskMyTuto extension does not collect, store, or share any personal data. It reads only the YouTube URL of your active tab — solely to open that video inside the AskMyTuto app.
+      </div>
+
+      <h2>1. What the Extension Does</h2>
+      <p>The AskMyTuto browser extension adds a button to YouTube video pages. When you click it, the extension reads the current tab's URL and opens the AskMyTuto web app with that video pre-loaded, so you can start an AI-assisted learning session immediately.</p>
+
+      <h2>2. Permissions We Request</h2>
+      <p>The extension requests the following browser permissions:</p>
+      <div class="pill-row">
+        <span class="pill">activeTab</span>
+        <span class="pill">scripting</span>
+        <span class="pill">host: youtube.com</span>
+      </div>
+      <ul>
+        <li><strong>activeTab</strong> — reads the URL of the tab you are currently viewing. Only triggered when you click the extension button; never runs in the background.</li>
+        <li><strong>scripting</strong> — injects the "Open in AskMyTuto" button into the YouTube player interface.</li>
+        <li><strong>host: youtube.com</strong> — limits the extension to only activate on YouTube pages. It has no access to any other website.</li>
+      </ul>
+
+      <h2>3. Data Collected</h2>
+      <p>The extension collects <strong>no personal data</strong>. The only value the extension reads is the YouTube video URL of your current tab. This URL is:</p>
+      <ul>
+        <li>Not stored locally or in any database.</li>
+        <li>Not transmitted to AskMyTuto servers directly by the extension. It is passed as a URL parameter when your browser opens the AskMyTuto app — the same as if you had copied and pasted the URL yourself.</li>
+        <li>Not shared with any third party.</li>
+      </ul>
+
+      <h2>4. No Tracking, Analytics, or Telemetry</h2>
+      <p>The extension contains no analytics, crash-reporting, telemetry, or advertising code. It does not track which videos you watch, how long you watch them, or any other browsing behaviour.</p>
+
+      <h2>5. Data Handled by the AskMyTuto Web App</h2>
+      <p>Once you are inside the AskMyTuto web application, the app's own <a href="https://app.askmytuto.com/privacy">Privacy Policy</a> applies. The extension itself has no involvement in how the app processes video transcripts or your questions.</p>
+
+      <h2>6. Third-Party Services</h2>
+      <p>The extension does not load, embed, or communicate with any third-party service. No Google Analytics, Firebase, Sentry, or similar SDKs are bundled.</p>
+
+      <h2>7. Updates to This Policy</h2>
+      <p>If the extension's permissions or data practices change in a future version, this page will be updated and the "Last updated" date above will reflect that change.</p>
+
+      <h2>8. Contact</h2>
+      <p>Questions about this policy? Reach us at <a href="mailto:privacy@askmytuto.com">privacy@askmytuto.com</a>.</p>
+
+      <hr class="divider">
+      <p style="font-size:13px;">See also: <a href="https://app.askmytuto.com/privacy">Full Privacy Policy</a> · <a href="https://app.askmytuto.com/terms">Terms of Service</a></p>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="foot">
+      <div class="foot-logo">
+        <span class="foot-dot" aria-hidden="true"></span>
+        AskMyTuto
+      </div>
+      <p class="foot-copy">© 2026 AskMyTuto · Built for developers who learn by watching.</p>
+      <nav class="foot-legal" aria-label="Legal links">
+        <a href="https://app.askmytuto.com/privacy">Privacy Policy</a>
+        <a href="https://app.askmytuto.com/terms">Terms</a>
+        <a href="/privacy-extension" class="on">Extension Privacy</a>
+      </nav>
+      <nav class="foot-langs" aria-label="Language versions">
+        <a href="https://askmytuto.com" hreflang="en">🇺🇸 EN</a>
+        <a href="https://askmytuto.com/ar" hreflang="ar">🇸🇦 AR</a>
+        <a href="https://askmytuto.com/jp/" hreflang="ja">🇯🇵 JP</a>
+        <a href="https://askmytuto.com/fr" hreflang="fr">🇫🇷 FR</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

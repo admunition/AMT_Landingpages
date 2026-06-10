@@ -1148,6 +1148,20 @@
       border-color: rgba(45, 212, 191, 0.4);
     }
 
+    .foot-legal {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot-legal a {
+      font-size: 12px;
+      color: var(--text3);
+      transition: color 0.18s;
+    }
+
+    .foot-legal a:hover { color: var(--text2); }
+
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -1561,11 +1575,15 @@
     <div class="foot">
       <div class="foot-logo"><span class="foot-dot"></span> AskMyTuto</div>
       <p class="foot-copy">© 2026 AskMyTuto · 見て学ぶ開発者のために。</p>
+      <nav class="foot-legal" aria-label="法的リンク">
+        <a href="https://app.askmytuto.com/privacy">プライバシーポリシー</a>
+        <a href="https://app.askmytuto.com/terms">利用規約</a>
+        <a href="/privacy-extension">拡張機能プライバシー</a>
+      </nav>
       <nav class="foot-langs" aria-label="言語バージョン">
         <a href="https://askmytuto.com" hreflang="en">🇺🇸 EN</a>
         <a href="https://askmytuto.com/ar" hreflang="ar">🇸🇦 AR</a>
-        <a href="https://askmytuto.com/jp" class="on" hreflang="ja">🇯🇵 JP</a>
-
+        <a href="https://askmytuto.com/jp/" class="on" hreflang="ja">🇯🇵 JP</a>
         <a href="https://askmytuto.com/fr" hreflang="fr">🇫🇷 FR</a>
       </nav>
     </div>
