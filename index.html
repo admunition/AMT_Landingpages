@@ -1440,6 +1440,32 @@
       animation-delay: 0.24s;
     }
 
+    .fu.d4 {
+      animation-delay: 0.36s;
+    }
+
+    .hero-video {
+      max-width: 860px;
+      margin: 48px auto 0;
+      padding: 0 24px;
+    }
+
+    .hero-video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 32px 80px rgba(0,0,0,0.5);
+    }
+
+    .hero-video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     @media (max-width: 960px) {
       .pricing-row {
         grid-template-columns: repeat(3, 1fr);
@@ -1566,6 +1592,19 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- VIDEO DEMO -->
+    <div class="hero-video fu d4">
+      <div class="hero-video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/1gWekJ8f5Lo"
+          title="AskMyTuto — Watch the demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
     </div>
   </header>
